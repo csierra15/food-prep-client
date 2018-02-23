@@ -12,6 +12,7 @@ import NewRecipeForm from './components/NewRecipeForm/NewRecipeForm'
 import NewShoppingListForm from './components/NewShoppingListForm/NewShoppingListForm'
 import Pantry from './components/Pantry/Pantry'
 import Dashboard from './components/Dashboard/Dashboard'
+import LogInForm from './components/LogInForm/LogInForm'
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
           <Route exact path="/pantry" component={Pantry} />
           <Route exact path="/shopping-list" component={ShoppingList} />
           <Route exact path="/new-shopping-list" component={NewShoppingListForm} />
+          <Route exact path="/log-in" component={LogInForm} />
           <Footer />
         </div>
       </Router>

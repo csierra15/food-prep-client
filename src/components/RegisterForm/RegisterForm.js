@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './RegisterForm.css'
 
 const RegisterForm = () => {
@@ -34,7 +34,7 @@ const RegisterForm = () => {
           <input type="password" name="confirm-password" />
 
           <button type="submit">Sign Up</button>
-          <span>Already have an account? <a href="#log-in">Log in</a></span>
+          <span>Already have an account? <Link to="/log-in">Log in</Link></span>
         </form>
     </section>
   )
