@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import './App.css';
+import './Main.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import NavBar from './components/NavBar/NavBar'
-import LandingPage from './components/LandingPage/LandingPage'
-import RegisterForm from './components/RegisterForm/RegisterForm'
-import Footer from './components/Footer/Footer'
-import Recipes from './components/Recipes/Recipes'
-import MealPlan from './components/MealPlan/MealPlan'
-import ShoppingList from './components/ShoppingList/ShoppingList'
-import NewRecipeForm from './components/NewRecipeForm/NewRecipeForm'
-import NewShoppingListForm from './components/NewShoppingListForm/NewShoppingListForm'
-import Pantry from './components/Pantry/Pantry'
-import Dashboard from './components/Dashboard/Dashboard'
-import LogInForm from './components/LogInForm/LogInForm'
+import NavBar from '../NavBar/NavBar'
+import LandingPage from '../LandingPage/LandingPage'
+import RegisterForm from '../RegisterForm/RegisterForm'
+import Footer from '../Footer/Footer'
+import Recipes from '../Recipes/Recipes'
+import MealPlan from '../MealPlan/MealPlan'
+import ShoppingList from '../ShoppingList/ShoppingList'
+import NewRecipeForm from '../NewRecipeForm/NewRecipeForm'
+import NewShoppingListForm from '../NewShoppingListForm/NewShoppingListForm'
+import Pantry from '../Pantry/Pantry'
+import Dashboard from '../Dashboard/Dashboard'
+import LogInForm from '../LogInForm/LogInForm'
 
-class App extends Component {
+class Main extends Component {
   render() {
     return (
       <Router>
@@ -37,4 +37,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Main;
