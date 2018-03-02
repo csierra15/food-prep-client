@@ -1,10 +1,10 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import '../../setupTests'
-import MealPlan from './MealPlan'
+import AddMealPlan from './AddMealPlan'
 
-describe('<MealPlan />', () => {
+describe('<AddMealPlan />', () => {
   it('renders without crashing', () => {
-    shallow(<MealPlan />)
+    shallow(<AddMealPlan />)
   })
 })

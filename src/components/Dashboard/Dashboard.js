@@ -27,6 +27,9 @@ const Dashboard = () => {
               <td>Steak and sweet potatoes</td>
             </tr>
           </table>
+          <button>edit</button>
+          <button>delete</button>
+          <button>new meal</button>
       </section>
     </div>
   )

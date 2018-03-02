@@ -1,32 +1,28 @@
 import React from 'react'
 import './NewRecipeForm.css'
+import AddIngredient from '../AddIngredient/AddIngredient'
 
 const NewRecipeForm = () => {
   return(
-    <form>
-      <label htmlFor="recipe-title">
-        <input type="text" placeholder="Spinach, Black Bean, and Chipotle Quesadillas Recipe" />
-      </label>
+    <form className="new-recipe-form" onSubmit={(e) => {
+      e.preventDefault()
+      const title = e.target.recipeTitleInput.value
+      const author = e.target.recipeAuthorInput.value
+      const url = e.target.recipeUrlInput.value
+      console.log(title, author, url)
+    }}>
+      <label htmlFor="recipeTitleInput"></label>
+      <input type="text" name="recipeTitleInput" placeholder="Spinach, Black Bean, and Chipotle Quesadillas Recipe" />
 
-      <label htmlFor="recipe-author">
-        <input type="text" placeholder="J. Kenji López-Alt" />
-      </label>
 
-      <label htmlFor="recipe-url">
-        <input type="text" placeholder="http://www.seriouseats.com/recipes/2017/02/spinach-black-bean-chipotle-quesadilla-recipe.html" />
-      </label>
+      <label htmlFor="recipeAuthorInput"></label>
+      <input type="text" name="recipeAuthorInput" placeholder="J. Kenji López-Alt" />
 
-      <label htmlFor="recipe-ingredients">
-        <input type="ingredients" placeholder="4 tortillas" />
-      </label>
 
-      <button className="add-ingredient-button">Add Ingredient</button>
+      <label htmlFor="recipeUrlInput"></label>
+      <input type="text" name="recipeUrlInput" placeholder="http://www.seriouseats.com/recipes/2017/02/spinach-black-bean-chipotle-quesadilla-recipe.html" />
 
-      <ul className="ingredient-list">
-        <li className="ingredient"></li>
-      </ul>
-
-      <button type="submit" className="save-recipe-button">Save Recipe</button>
+      <AddIngredient />
     </form>
   )
 }

@@ -3,7 +3,10 @@ import './LogInForm.css'
 
 const LogInForm = () => {
   return (
-    <form>
+    <form className="loginForm" onSubmit={(e) => {
+      e.preventDefault()
+      console.log('form submitted!')
+    }}>
       <label htmlFor="email">
         Email Address
       </label>
