@@ -1,6 +1,8 @@
 import React from 'react'
 import './AddMealPlan.css'
 
+//connect to redux
+
 const AddMealPlan = () => {
   return (
     <div className="meal-plan">
@@ -14,6 +16,7 @@ const AddMealPlan = () => {
           const meal = e.target.mealSelect.value
           const mealDesc = e.target.mealDescription.value
     			console.log(day, meal, mealDesc)
+          //dispatch action
     		}}>
 
           <select name="daySelect">

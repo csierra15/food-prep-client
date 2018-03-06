@@ -1,37 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './RegisterForm.css'
+import {connect} from 'react-redux'
+import { registerUser } from '../../actions/authActions'
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
   return (
     <section>
         <h2>Ready to make a plan?</h2>
         <h3>sign up for an account</h3>
-        <form>
-          <label htmlFor="first-name">
-            First Name
-          </label>
-          <input type="text" name="first-name" />
+        <form onSubmit={ (e) => {
+          e.preventDefault();
+          const username = e.target.username.value
+          const password = e.target.password.value
 
-          <label htmlFor="last-name">
-            Last Name
+          props.dispatch(registerUser(username, password))
+        }}>
+          <label htmlFor="username">
+            Username
           </label>
-          <input type="text" name="last-name" />
-
-          <label htmlFor="email">
-            Email Address
-          </label>
-          <input type="email" name="email" />
+          <input type="text" name="username" />
 
           <label htmlFor="password">
             Password
           </label>
           <input type="password" name="password" />
 
-          <label htmlFor="confirm-password">
+          <label htmlFor="confirmPassword">
             Confirm Password
           </label>
-          <input type="password" name="confirm-password" />
+          <input type="password" name="confirmPassword" />
 
           <button type="submit">Sign Up</button>
           <span>Already have an account? <Link to="/log-in">Log in</Link></span>
@@ -40,4 +38,4 @@ const RegisterForm = () => {
   )
 }
 
-export default RegisterForm
+export default connect()(RegisterForm)

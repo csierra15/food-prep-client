@@ -1,31 +1,14 @@
 const initialState = {
-  userName: 'Carly',
-  recipes: [
-    {
-      mealType: 'Breakfast',
-      date: '3/05/2018',
-      recipeTitle: 'Breakfast burritos',
-      ingredients: ['tortillas', 'eggs', 'cheese', 'bacon']
-    },
-    {
-      mealType: 'Lunch',
-      date: '3/05/2018',
-      recipeTitle: 'Grilled chicken salad with southwest dressing',
-      ingredients: ['lettuce', 'grilled chicken', 'cheese', 'southwest ranch', 'tomatoes']
-    },
-    {
-      mealType: 'Dinner',
-      date: '3/05/2018',
-      recipeTitle: 'Ribeye and broccoli',
-      ingredients: ['ribeye steaks', 'broccoli']
-    }
-  ]
+  data:{}
 }
 
 const user = (state = initialState, action) => {
   switch(action.type) {
-    case '':
-      return {}
+    case 'REGISTER_USER_SUCCESS':
+      return {
+        ...state,
+        data: action.user
+      }
 
     default:
       return state

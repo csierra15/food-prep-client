@@ -14,13 +14,12 @@ const NewRecipeForm = () => {
       <label htmlFor="recipeTitleInput"></label>
       <input type="text" name="recipeTitleInput" placeholder="Spinach, Black Bean, and Chipotle Quesadillas Recipe" />
 
-
       <label htmlFor="recipeAuthorInput"></label>
       <input type="text" name="recipeAuthorInput" placeholder="J. Kenji López-Alt" />
 
-
       <label htmlFor="recipeUrlInput"></label>
       <input type="text" name="recipeUrlInput" placeholder="http://www.seriouseats.com/recipes/2017/02/spinach-black-bean-chipotle-quesadilla-recipe.html" />
+
 
       <AddIngredient />
     </form>

@@ -2,7 +2,9 @@ import React from 'react'
 
 const AddIngredient = () => {
   return(
-    <form>
+    <form
+      //onSubmit= dispatch action w/ Type 
+      >
       <label htmlFor="recipeIngredientsInput"></label>
       <input type="ingredients" name="recipeIngredientsInput" placeholder="4 tortillas" />
 
