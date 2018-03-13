@@ -1,5 +1,11 @@
 const initialState = {
-  data:{}
+  data:{},
+  token: '',
+  loggedIn: false,
+  mealPlan: [],
+  recipes: [],
+  shoppingList: [],
+  pantry: []
 }
 
 const user = (state = initialState, action) => {
@@ -8,6 +14,14 @@ const user = (state = initialState, action) => {
       return {
         ...state,
         data: action.user
+      }
+
+      case 'LOGIN_USER_SUCCESS':
+      console.log('hello there');
+      return {
+        ...state,
+        token: action.token,
+        loggedIn: true
       }
 
     default:

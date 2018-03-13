@@ -32,7 +32,7 @@ const RegisterForm = (props) => {
           <input type="password" name="confirmPassword" />
 
           <button type="submit">Sign Up</button>
-          <span>Already have an account? <Link to="/log-in">Log in</Link></span>
+          <span>Already have an account? <Link to="/login">Log in</Link></span>
         </form>
     </section>
   )

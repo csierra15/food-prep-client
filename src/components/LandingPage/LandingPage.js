@@ -1,9 +1,20 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './LandingPage.css'
-
 const LandingPage = () => {
   return (
     <main role="main">
+
+      <Link to="/register" className="nav-list-item">
+        <button>
+          Register
+        </button>
+      </Link>
+      <Link to="/login" className="nav-list-item">
+        <button>
+          Log In
+        </button>
+      </Link>
       <header role="banner">
         <h1>Food Prep</h1>
         <h2>Take Control</h2>

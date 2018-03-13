@@ -1,16 +1,16 @@
-import React, { Componenet } from 'react'
+import React from 'react'
 import './LogInForm.css'
 import { connect } from 'react-redux'
+import { logInUser } from '../../actions/authActions'
 
-//should this be stateful?
-const LogInForm = () => {
+const LogInForm = (props) => {
   return (
-    <form onSubmit={ (e) => {
+    <form onSubmit={(e) => {
       e.preventDefault();
-      // const username = e.target.username.value
-      // const password = e.target.password.value
-      //
-      // props.dispatch(logInUser(username, password))
+      const username = e.target.username.value
+      const password = e.target.password.value
+
+      props.dispatch(logInUser(username, password))
     }}>
       <label htmlFor="username">
         Username
@@ -27,4 +27,4 @@ const LogInForm = () => {
   )
 }
 
-export default LogInForm
+export default connect()(LogInForm)
