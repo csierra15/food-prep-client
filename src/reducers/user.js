@@ -2,7 +2,13 @@ const initialState = {
   data:{},
   token: '',
   loggedIn: false,
-  mealPlan: [],
+  meals: [
+    {
+      name: "oatmeal",
+      category: "morning",
+
+    }
+  ],
   recipes: [],
   shoppingList: [],
   pantry: []
@@ -17,11 +23,17 @@ const user = (state = initialState, action) => {
       }
 
       case 'LOGIN_USER_SUCCESS':
-      console.log('hello there');
       return {
         ...state,
         token: action.token,
         loggedIn: true
+
+      }
+
+      case 'ADD_MEAL':
+      return {
+        ...state,
+        mealPlan: action.content
       }
 
     default:

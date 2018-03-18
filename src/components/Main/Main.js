@@ -8,7 +8,6 @@ import LandingPage from '../LandingPage/LandingPage'
 import RegisterForm from '../RegisterForm/RegisterForm'
 import Footer from '../Footer/Footer'
 import Recipes from '../Recipes/Recipes'
-import AddMealPlan from '../AddMealPlan/AddMealPlan'
 import ShoppingList from '../ShoppingList/ShoppingList'
 import NewRecipeForm from '../NewRecipeForm/NewRecipeForm'
 import NewShoppingListForm from '../NewShoppingListForm/NewShoppingListForm'
@@ -35,7 +34,6 @@ class Main extends Component {
           <Route exact path="/register" component={RegisterForm} />
           <Route exact path="/recipes" component={Recipes} />
           <Route exact path="/new-recipe" component={NewRecipeForm} />
-          <Route exact path="/add-meal-plan" component={AddMealPlan} />
           <Route exact path="/pantry" component={Pantry} />
           <Route exact path="/shopping-list" component={ShoppingList} />
           <Route exact path="/new-shopping-list" component={NewShoppingListForm} />

@@ -11,7 +11,6 @@ const NavBar = (props) => {
             <li><Link to="/dashboard" className="nav-list-item">Home</Link></li>
     				<li><Link to="/recipes" className="nav-list-item">Recipes</Link></li>
             <li><Link to="/pantry" className="nav-list-item">Pantry</Link></li>
-            <li><Link to="/add-meal-plan" className="nav-list-item">Meal Plan</Link></li>
             <li><Link to="/shopping-list" className="nav-list-item">Shopping List</Link></li>
             <li><Link to="/" className="nav-list-item"
               onClick={() => {

@@ -1,12 +1,14 @@
 import {API_BASE_URL} from '../config'
 
-const registerUserSuccess = (user) => ({
-  type: 'REGISTER_USER_SUCCESS',
+export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS'
+export const registerUserSuccess = (user) => ({
+  type: REGISTER_USER_SUCCESS,
   user
 })
 
+export const LOGIN_USER_SUCCESS = 'LOGIN_USER_SUCCESS'
 export const logInUserSuccess = (token) => ({
-  type: 'LOGIN_USER_SUCCESS',
+  type: LOGIN_USER_SUCCESS,
   token
 })
 

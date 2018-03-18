@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-footer {
+footer, span {
   background-color: grey;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  text-align: center;
 }

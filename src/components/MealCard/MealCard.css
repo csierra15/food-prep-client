@@ -1,0 +1,21 @@
+.meal-card {
+  width: 10em;
+  height: 10em;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.2em;
+  margin-bottom: 1em;
+}
+
+.new-item {
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.new-item:hover {
+  background-color: lightgray;
+}
