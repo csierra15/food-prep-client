@@ -1,12 +1,18 @@
 import React from 'react'
 import './ShoppingList.css'
 
-const ShoppingList = () => {
+const ShoppingList = (props) => {
   return (
     <div className="shopping-list-card">
-      <h4>Shopping List Title</h4>
+      <h4>Keep your shopping lists here!</h4>
       <div className="container">
-        <p>Shopping list content</p>
+        <ul>
+          <h5>{props.shoppingListTitle}</h5>
+          {props.shoppingListItems}
+          <form>
+            <input placeholder="new item" className="new-item" name="userInput"></input>
+          </form>
+        </ul>
       </div>
 
       <button>New List</button>

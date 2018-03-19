@@ -5,4 +5,7 @@ footer, span {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
