@@ -2,13 +2,7 @@ const initialState = {
   data:{},
   token: '',
   loggedIn: false,
-  meals: [
-    {
-      name: "oatmeal",
-      category: "morning",
-
-    }
-  ],
+  meals: [],
   recipes: [],
   shoppingList: [],
   pantry: []
@@ -32,8 +26,12 @@ const user = (state = initialState, action) => {
 
       case 'ADD_MEAL':
       return {
-        ...state,
-        mealPlan: action.content
+        ...state
+      }
+
+      case 'ADD_LIST':
+      return {
+        ...state
       }
 
     default:
