@@ -1,9 +1,9 @@
 import React from 'react'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
-import 'react-big-calendar/lib/css/react-big-calendar.css'
 import Events from './Events'
 import './Calendar.css'
+require('react-big-calendar/lib/css/react-big-calendar.css')
 
 
 let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
