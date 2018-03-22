@@ -1,49 +1,20 @@
-const Events = [{
+import moment from 'moment';
+
+const events = [
+  {
     id: 0,
-    title: 'All Day Event very long title',
-    allDay: true,
-    start: new Date(2015, 3, 0),
-    end: new Date(2015, 3, 1),
+    title: 'Breakfast',
+    start: moment('3/20/2018', "MM-DD-YYYY"),
+    end: moment('3/20/2018', "MM-DD-YYYY"),
+    desc: 'bacon, spinach, cheese omelette'
   },
   {
     id: 1,
-    title: 'Long Event',
-    start: new Date(2015, 3, 7),
-    end: new Date(2015, 3, 10),
-  },
+    title: 'Morning Snack',
+    start: moment('3/01/2018', "MM-DD-YYYY"),
+    end: moment('3/01/2018', "MM-DD-YYYY"),
+    desc: 'dried cranberries and nuts'
+   }
+]
 
-  {
-    id: 2,
-    title: 'DTS STARTS',
-    start: new Date(2016, 2, 13, 0, 0, 0),
-    end: new Date(2016, 2, 20, 0, 0, 0),
-  },
-
-  {
-    id: 3,
-    title: 'DTS ENDS',
-    start: new Date(2016, 10, 6, 0, 0, 0),
-    end: new Date(2016, 10, 13, 0, 0, 0),
-  },
-
-  {
-    id: 4,
-    title: 'Some Event',
-    start: new Date(2015, 3, 9, 0, 0, 0),
-    end: new Date(2015, 3, 9, 0, 0, 0),
-  },
-  {
-    id: 5,
-    title: 'Conference',
-    start: new Date(2015, 3, 11),
-    end: new Date(2015, 3, 13),
-    desc: 'Big conference for important people',
-  },
-  {
-    id: 6,
-    title: 'Meeting',
-    start: new Date(2015, 3, 12, 10, 30, 0, 0),
-    end: new Date(2015, 3, 12, 12, 30, 0, 0),
-    desc: 'Pre-meeting meeting, to prepare for the meeting',
-  }]
-export default Events
+export default events

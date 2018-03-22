@@ -1,0 +1,18 @@
+#mealDesc, input, label {
+  text-align: center;
+  width: 33.3%;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 1em;
+}
+
+#mealDesc:focus {
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  width: 100%;
+}

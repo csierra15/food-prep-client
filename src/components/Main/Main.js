@@ -13,6 +13,7 @@ import NewRecipeForm from '../NewRecipeForm/NewRecipeForm'
 import NewShoppingListForm from '../NewShoppingListForm/NewShoppingListForm'
 import Pantry from '../Pantry/Pantry'
 import Dashboard from '../Dashboard/Dashboard'
+import MealForm from '../MealForm/MealForm'
 import LogInForm from '../LogInForm/LogInForm'
 
 class Main extends Component {
@@ -31,6 +32,7 @@ class Main extends Component {
           <NavBar />
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/add-meal" component={MealForm} />
           <Route exact path="/register" component={RegisterForm} />
           <Route exact path="/recipes" component={Recipes} />
           <Route exact path="/new-recipe" component={NewRecipeForm} />

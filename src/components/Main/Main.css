@@ -2,7 +2,7 @@
 /* font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
-/* .app {
+.app {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: none;
@@ -10,4 +10,18 @@ font-family: 'Roboto', sans-serif; */
 
 li {
   style: none;
-} */
+}
+
+button {
+  margin-bottom: 2em;
+  font-size: 1em;
+  border-radius: 5px;
+  width: 8em;
+  height: 2em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #497513;
+  color: #FFFF;
+}
