@@ -1,4 +1,5 @@
 import {API_BASE_URL} from '../config'
+import {fetchMealData} from './index'
 
 export const REGISTER_USER_SUCCESS = 'REGISTER_USER_SUCCESS'
 export const registerUserSuccess = (user) => ({
@@ -49,8 +50,9 @@ export const logInUser = (username, password) => {
     .then(json => {
       const { authToken, userId } = json
       localStorage.setItem('token', authToken)
-      localStorage.setItem('id', userId)
+      localStorage.setItem('userId', userId)
       dispatch(logInUserSuccess(authToken))
+      dispatch(fetchMealData(authToken))
       window.location = '/dashboard'
     })
     .catch(err => console.log(err))

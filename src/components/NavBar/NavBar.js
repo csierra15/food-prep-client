@@ -14,8 +14,8 @@ const NavBar = (props) => {
             <li><Link to="/shopping-list" className="nav-list-item">Shopping List</Link></li>
             <li><Link to="/" className="nav-list-item"
               onClick={() => {
-                console.log('log out clicked');
                 localStorage.clear()
+                props.isLoggedIn = false
               }}>
               Log Out</Link></li>
             </ul>

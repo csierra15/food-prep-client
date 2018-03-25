@@ -3,8 +3,12 @@ import './Dashboard.css'
 import { Link } from 'react-router-dom'
 import Calendar from '../Calendar/Calendar'
 import { connect } from 'react-redux'
-
+import { fetchMealData } from '../../actions'
 export class Dashboard extends Component {
+
+  componentDidMount(props) {
+    this.props.dispatch(fetchMealData())
+  }
 
   render() {
     return (

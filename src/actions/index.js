@@ -1,19 +1,24 @@
 import {API_BASE_URL} from '../config'
 const authToken = localStorage.getItem('token')
+const userId = localStorage.getItem('userId')
 
 export const ADD_MEAL = 'ADD_MEAL'
-export const addMeal = (content) => {
-  return(dispatch) => {
-    fetch(`${API_BASE_URL}/meals`, {
+export const addMeal = (values) => {
+  return (dispatch) => {
+    fetch(`${API_BASE_URL}/meals/${userId}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
       },
-      body: JSON.stringify({content})
+      body: JSON.stringify({values})
     })
     .then(res => res.json())
-    .then(json => console.log(json))
+    .then((json) => {
+      console.log('meal added! fetching data...')
+      dispatch(fetchMealData())
+      window.location = '/dashboard'
+    })
     .catch(err => console.log(err))
   }
 }
@@ -32,8 +37,19 @@ export const updateMeal = (content, index) => {
 }
 
 export const FETCH_MEAL_DATA = 'FETCH_MEAL_DATA'
-export const fetchMealData = () => dispatch => {
-  type: FETCH_MEAL_DATA
+export const fetchMealData = () => {
+  return (dispatch) => {
+    fetch(`${API_BASE_URL}/meals/${userId}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+      }
+    })
+    .then(res => res.json())
+    .then(json => console.log('fetching meal data...', json))
+    .catch(err => console.log(err))
+  }
 }
 
 export const ADD_LIST = 'ADD_LIST'

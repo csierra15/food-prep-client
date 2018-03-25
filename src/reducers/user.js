@@ -3,9 +3,8 @@ const initialState = {
   token: '',
   loggedIn: false,
   meals: [],
-  recipes: [],
-  shoppingList: [],
-  pantry: []
+  events: [],
+  lists: []
 }
 
 const user = (state = initialState, action) => {
@@ -21,12 +20,12 @@ const user = (state = initialState, action) => {
         ...state,
         token: action.token,
         loggedIn: true
-
       }
 
-      case 'ADD_MEAL':
+      case 'FETCH_MEAL_DATA':
       return {
-        ...state
+        ...state,
+        events: action.events
       }
 
       case 'ADD_LIST':

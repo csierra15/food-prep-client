@@ -18,6 +18,7 @@ button {
   border-radius: 5px;
   width: 8em;
   height: 2em;
+  background-color: #D6BFAB;
 }
 
 button:hover {

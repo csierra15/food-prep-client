@@ -1,11 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment'
-import events from './Events'
 import './Calendar.css'
 require('react-big-calendar/lib/css/react-big-calendar.css')
 
-let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
+//let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment))
 
@@ -14,8 +14,9 @@ const Calendar = props => (
     <BigCalendar
       popup={true}
       selectable={true}
-      events={events}
-      views={allViews}
+      drilldownView='agenda'
+      events={props.events}
+      views={['month', 'day', 'week', 'agenda']}
       startAccessor='start'
       endAccessor='end'
       step={60}
@@ -26,4 +27,8 @@ const Calendar = props => (
   </div>
 )
 
-export default Calendar
+const mapStateToProps = (state) => ({
+  events: state.user.events
+})
+
+export default connect(mapStateToProps)(Calendar)
