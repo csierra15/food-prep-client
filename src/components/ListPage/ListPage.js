@@ -1,18 +1,18 @@
 import React from 'react'
-import './ShoppingList.css'
+import './ListPage.css'
 import { connect } from 'react-redux'
 import { editListItem, deleteListItem, addItem } from '../../actions'
 
-const ShoppingList = (props) => {
+const ListPage = (props) => {
   return (
-    <div className="shopping-list-card">
+    <div className="list-card">
       <h4>LISTS  - IDEAS - RECIPES...</h4>
 
       <div className="container">
         <ul>
-          <h5>{props.shoppingListTitle}</h5>
+          <h5>{props.listTitle}</h5>
           <ul>
-            {props.shoppingListItems.map(list => {
+            {props.listItems.map(list => {
               <li>
                 {list.item}
                 <span>
@@ -35,7 +35,7 @@ const ShoppingList = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-  shoppingListItems: state.user.lists
+  listItems: state.user.lists
 })
 
-export default connect(mapStateToProps)(ShoppingList)
+export default connect(mapStateToProps)(ListPage)

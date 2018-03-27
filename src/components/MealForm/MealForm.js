@@ -1,6 +1,9 @@
+import 'rc-time-picker/assets/index.css';
 import React from 'react'
 import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
+import moment from 'moment';
+import TimePicker from 'rc-time-picker';
 import './MealForm.css'
 
 let MealForm = (props) => {
@@ -17,24 +20,14 @@ let MealForm = (props) => {
           </div>
         </div>
         <div>
-          <label htmlFor="mealTime">Meal Time</label>
+          <label htmlFor="time">Select Time</label>
           <div>
-            <label htmlFor="morning">
-              <Field name="time" component="input" type="radio" value="morning" id="morning" />
-              {' '}Morning
-            </label>
-          </div>
-          <div>
-            <label htmlFor="afternoon">
-              <Field name="time" component="input" type="radio" value="afternoon" id="afternoon" />
-              {' '}Afternoon
-            </label>
-          </div>
-          <div>
-            <label htmlFor="evening">
-              <Field name="time" component="input" type="radio" value="evening" id="evening" />
-              {' '}Evening
-            </label>
+            <TimePicker
+              defaultValue={moment()}
+              showSecond={false}
+              minuteStep={15}
+              use12Hours
+             />
           </div>
         </div>
         <div>

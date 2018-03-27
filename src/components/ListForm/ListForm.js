@@ -1,7 +1,7 @@
 import React from 'react'
-import './NewShoppingListForm.css'
+import './ListForm.css'
 
-const NewShoppingListForm = () => {
+const ListForm = () => {
   return(
     <form>
       <label htmlFor="list-title">
@@ -23,4 +23,4 @@ const NewShoppingListForm = () => {
   )
 }
 
-export default NewShoppingListForm
+export default ListForm

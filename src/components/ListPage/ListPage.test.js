@@ -1,10 +1,10 @@
 // import React from 'react'
 // import { shallow } from 'enzyme'
 // import '../../setupTests'
-// import AddMealPlan from './AddMealPlan'
+// import ListPage from './ListPage'
 //
-// describe('<AddMealPlan />', () => {
+// describe('<ListPage />', () => {
 //   it('renders without crashing', () => {
-//     shallow(<AddMealPlan />)
+//     shallow(<ListPage />)
 //   })
 // })
