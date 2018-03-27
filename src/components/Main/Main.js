@@ -7,11 +7,8 @@ import NavBar from '../NavBar/NavBar'
 import LandingPage from '../LandingPage/LandingPage'
 import RegisterForm from '../RegisterForm/RegisterForm'
 import Footer from '../Footer/Footer'
-import Recipes from '../Recipes/Recipes'
 import ShoppingList from '../ShoppingList/ShoppingList'
-import NewRecipeForm from '../NewRecipeForm/NewRecipeForm'
 import NewShoppingListForm from '../NewShoppingListForm/NewShoppingListForm'
-import Pantry from '../Pantry/Pantry'
 import Dashboard from '../Dashboard/Dashboard'
 import MealPage from '../MealPage/MealPage'
 import LogInForm from '../LogInForm/LogInForm'
@@ -34,11 +31,8 @@ class Main extends Component {
           <Route exact path="/dashboard" component={Dashboard} />
           <Route exact path="/add-meal" component={MealPage} />
           <Route exact path="/register" component={RegisterForm} />
-          <Route exact path="/recipes" component={Recipes} />
-          <Route exact path="/new-recipe" component={NewRecipeForm} />
-          <Route exact path="/pantry" component={Pantry} />
-          <Route exact path="/shopping-list" component={ShoppingList} />
-          <Route exact path="/new-shopping-list" component={NewShoppingListForm} />
+          <Route exact path="/lists" component={ShoppingList} />
+          <Route exact path="/new-list" component={NewShoppingListForm} />
           <Route exact path="/login" component={LogInForm} />
           <Footer />
         </div>

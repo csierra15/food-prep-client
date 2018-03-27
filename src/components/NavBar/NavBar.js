@@ -9,10 +9,8 @@ const NavBar = (props) => {
         {props.isLoggedIn ?
           <ul className="nav-list">
             <li><Link to="/dashboard" className="nav-list-item">Home</Link></li>
-    				<li><Link to="/recipes" className="nav-list-item">Recipes</Link></li>
-            <li><Link to="/pantry" className="nav-list-item">Pantry</Link></li>
-            <li><Link to="/shopping-list" className="nav-list-item">Shopping List</Link></li>
-            <li><Link to="/" className="nav-list-item"
+            <li><Link to="/lists" className="nav-list-item">Shopping List</Link></li>
+            <li><Link to="/" className="nav-list-item log-out"
               onClick={() => {
                 localStorage.clear()
                 props.isLoggedIn = false

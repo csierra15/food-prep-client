@@ -35,7 +35,7 @@ const ShoppingList = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-  shoppingListItems: state.user.shoppingList
+  shoppingListItems: state.user.lists
 })
 
 export default connect(mapStateToProps)(ShoppingList)

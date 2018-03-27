@@ -9,12 +9,15 @@
   left: 0;
 }
 
+ul {
+  margin: 0;
+}
+
 li {
  list-style: none;
 }
 
-.nav-list-item {
-  float: left;
+.nav-list-item, .log-out {
   display: block;
   color: #f2f2f2;
   background-color: #F2C42E;
@@ -23,6 +26,14 @@ li {
   text-decoration: none;
   font-size: 1em;
   margin: 0;
+}
+
+.nav-list-item {
+  float: left;
+}
+
+.log-out {
+  float: right;
 }
 
 .nav-list-item:hover {

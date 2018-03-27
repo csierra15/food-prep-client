@@ -5,9 +5,9 @@ import moment from 'moment'
 import './Calendar.css'
 require('react-big-calendar/lib/css/react-big-calendar.css')
 
-//let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k])
-
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment))
+
+//click event, show modal to edit/delete
 
 const Calendar = props => (
   <div className="bigCalendar">
@@ -21,7 +21,11 @@ const Calendar = props => (
       endAccessor='end'
       step={60}
       onSelectSlot={(arg) => {
-        console.log(arg);
+        //dispatch an action to put "arg" into the state
+        console.log(arg)
+      }}
+      onSelectEvent={(arg) => {
+        console.log(arg)
       }}
     />
   </div>

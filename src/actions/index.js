@@ -13,10 +13,9 @@ export const addMeal = (values) => {
       },
       body: JSON.stringify({values})
     })
-    .then(res => res.json())
-    .then((json) => {
+    .then(res => {
+      res.json()
       console.log('meal added! fetching data...')
-      dispatch(fetchMealData())
       window.location = '/dashboard'
     })
     .catch(err => console.log(err))
@@ -36,6 +35,12 @@ export const updateMeal = (content, index) => {
   index
 }
 
+export const FETCH_MEAL_DATA_SUCCESS = 'FETCH_MEAL_DATA_SUCCESS'
+export const fetchMealDataSuccess = (events) => ({
+  type: FETCH_MEAL_DATA_SUCCESS,
+  events
+})
+
 export const FETCH_MEAL_DATA = 'FETCH_MEAL_DATA'
 export const fetchMealData = () => {
   return (dispatch) => {
@@ -47,7 +52,7 @@ export const fetchMealData = () => {
       }
     })
     .then(res => res.json())
-    .then(json => console.log('fetching meal data...', json))
+    .then(json => dispatch(fetchMealDataSuccess(json)))
     .catch(err => console.log(err))
   }
 }

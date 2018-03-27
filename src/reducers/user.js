@@ -4,7 +4,8 @@ const initialState = {
   loggedIn: false,
   meals: [],
   events: [],
-  lists: []
+  lists: [],
+  currentSelectedEvent: {}
 }
 
 const user = (state = initialState, action) => {
@@ -22,7 +23,7 @@ const user = (state = initialState, action) => {
         loggedIn: true
       }
 
-      case 'FETCH_MEAL_DATA':
+      case 'FETCH_MEAL_DATA_SUCCESS':
       return {
         ...state,
         events: action.events
