@@ -1,11 +1,11 @@
 const initialState = {
-  data:{},
   token: '',
   loggedIn: false,
   meals: [],
   events: [],
   lists: [],
-  currentSelectedEvent: {}
+  currentSelectedEvent: {},
+  isOpen: false
 }
 
 const user = (state = initialState, action) => {
@@ -27,6 +27,13 @@ const user = (state = initialState, action) => {
       return {
         ...state,
         events: action.events
+      }
+
+      case 'GET_MEAL_INFO':
+      return {
+        ...state,
+        currentSelectedEvent: action.content,
+        isOpen: true
       }
 
       case 'ADD_LIST':
