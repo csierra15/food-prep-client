@@ -43,10 +43,14 @@ export class EditMealForm extends Component {
           <button type="submit" disabled={pristine || submitting}>
             Submit
           </button>
-          <button type="submit" className="delete-button" disabled={pristine || submitting}>
-            Delete
-          </button>
         </form>
+        <button
+          className="delete-button"
+          disabled={pristine || submitting}
+          onClick={() => this.props.dispatch(deleteMeal(this.props.id))}
+          >
+          Delete
+        </button>
       </div>
     )
   }
@@ -61,7 +65,8 @@ const mapStateToProps = (state) => ({
   date: state.user.currentSelectedEvent.start,
   time: state.user.currentSelectedEvent.startTime,
   title: state.user.currentSelectedEvent.title,
-  initialValues: state.user.currentSelectedEvent
+  initialValues: state.user.currentSelectedEvent,
+  id: state.user.currentSelectedEvent._id
 })
 
 export default connect(mapStateToProps)(EditMealForm)

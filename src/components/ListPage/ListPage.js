@@ -1,25 +1,21 @@
-import React from 'react'
+import React, {Component} from 'react'
 import './ListPage.css'
-import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { editListItem, deleteListItem, addItem } from '../../actions'
+import { addList } from '../../actions'
+import ListForm from '../ListForm/ListForm'
 
-const ListPage = (props) => {
-  return (
-    <div className="list-card">
-      <h4>LISTS  - IDEAS - RECIPES...</h4>
+class ListPage extends Component {
 
-      <div className="container">
-        <h5>{props.listTitle}</h5>
-      </div>
+  submit = values => {
+    console.log('dispatching add list!', values)
+    this.props.dispatch(addList(values))
+  }
 
-      <Link to="/add-list"><button>New List</button></Link>
-    </div>
-  )
+  render() {
+    return (
+      <ListForm onSubmit={this.submit} />
+    )
+  }
 }
 
-const mapStateToProps = (state) => ({
-  listItems: state.user.lists
-})
-
-export default connect(mapStateToProps)(ListPage)
+export default connect()(ListPage)

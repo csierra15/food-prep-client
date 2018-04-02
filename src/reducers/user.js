@@ -26,7 +26,8 @@ const user = (state = initialState, action) => {
       case 'FETCH_MEAL_DATA_SUCCESS':
       return {
         ...state,
-        events: action.events
+        events: action.events,
+        isOpen: false
       }
 
       case 'GET_MEAL_INFO':
@@ -36,9 +37,10 @@ const user = (state = initialState, action) => {
         isOpen: true
       }
 
-      case 'ADD_LIST':
+      case 'FETCH_LIST_DATA_SUCCESS':
       return {
-        ...state
+        ...state,
+        lists: action.lists
       }
 
       case 'CLOSE_MODAL':

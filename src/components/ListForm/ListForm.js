@@ -1,5 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import { addList } from '../../actions'
 import './ListForm.css'
 
 let ListForm = (props) => {
@@ -8,16 +9,16 @@ let ListForm = (props) => {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="listTitle">Title</label>
+          <label htmlFor="title">Title</label>
           <div>
-            <Field name="listTitle" component="input" type="text" id="listTitle" placeholder="Shopping List" />
+            <Field name="title" component="input" type="text" id="listTitle" placeholder="Shopping List" />
           </div>
         </div>
 
         <div>
-          <label htmlFor="listContent">Content</label>
+          <label htmlFor="content">Content</label>
           <div>
-            <Field name="listContent" component="textarea" type="text" id="listContent" placeholder="Shopping List" />
+            <Field name="content" component="textarea" type="text" id="listContent" placeholder="Shopping List" />
           </div>
         </div>
 
