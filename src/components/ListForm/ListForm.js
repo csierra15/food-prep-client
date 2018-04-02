@@ -1,10 +1,9 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { addList } from '../../actions'
 import './ListForm.css'
 
 let ListForm = (props) => {
-  const { handleSubmit, submitting, pristine, reset } = props
+  const { handleSubmit, submitting, pristine } = props
   return(
     <div>
       <form onSubmit={handleSubmit}>
@@ -22,7 +21,7 @@ let ListForm = (props) => {
           </div>
         </div>
 
-        <button type="submit">Save</button>
+        <button type="submit" disabled={pristine || submitting}>Save</button>
       </form>
     </div>
   )

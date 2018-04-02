@@ -4,7 +4,6 @@ import moment from 'moment';
 import TimePicker from 'rc-time-picker';
 
 const format = 'h:mm a';
-const now = moment().hour(0).minute(0);
 
 const TimePickerComponent = (props) => {
   return(

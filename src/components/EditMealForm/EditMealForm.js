@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Field, reduxForm, change } from 'redux-form'
 import TimePickerComponent from '../TimePicker/TimePicker'
 import moment from 'moment'
-import { updateMeal, deleteMeal } from '../../actions'
+import { deleteMeal } from '../../actions'
 
 export class EditMealForm extends Component {
 
@@ -13,7 +13,7 @@ export class EditMealForm extends Component {
     this.props.dispatch(change('editMeal', 'mealDescription', this.props.title))
   }
   render() {
-    const { handleSubmit, load, reset, pristine, submitting } = this.props
+    const { handleSubmit, pristine, submitting } = this.props
     return (
       <div>
         <form id="new-plan-form" onSubmit={handleSubmit}>

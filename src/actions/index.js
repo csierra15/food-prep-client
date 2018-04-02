@@ -120,7 +120,7 @@ export const addList = (values) => {
     })
     .then(res => {
       res.json()
-      //window.location = '/dashboard'
+      window.location = '/lists'
     })
     .catch(err => console.log(err))
   }
@@ -137,15 +137,12 @@ export const deleteList = (listId) => {
       }
     })
     .then(res => res.json())
-    .then(json => dispatch(deleteListSuccess(json)))
+    .then(json => {
+      dispatch(fetchListDataSuccess(json))
+    })
     .catch(err => console.log(err))
   }
 }
-
-export const DELETE_LIST_SUCCESS = 'DELETE_LIST_SUCCESS'
-export const deleteListSuccess = () => ({
-  type: DELETE_LIST_SUCCESS
-})
 
 export const UPDATE_LIST = 'UPDATE_LIST'
 export const updateList = (content, index) => ({
@@ -155,7 +152,7 @@ export const updateList = (content, index) => ({
 })
 
 export const FETCH_LIST_DATA = 'FETCH_LIST_DATA'
-export const fetchListData = (dispatch) => {
+export const fetchListData = () => {
   return (dispatch) => {
     fetch(`${API_BASE_URL}/lists/${userId}`, {
       method: 'GET',
@@ -165,7 +162,10 @@ export const fetchListData = (dispatch) => {
       }
     })
     .then(res => res.json())
-    .then(json => dispatch(fetchListDataSuccess(json)))
+    .then((json) => {
+      console.log('hello hello hello', json)
+      dispatch(fetchListDataSuccess(json))
+    })
     .catch(err => console.log(err))
   }
 }
@@ -174,25 +174,6 @@ export const FETCH_LIST_DATA_SUCCESS = 'FETCH_LIST_DATA_SUCCESS'
 export const fetchListDataSuccess = (lists) => ({
   type: FETCH_LIST_DATA_SUCCESS,
   lists
-})
-
-export const ADD_LIST_ITEM = 'ADD_LIST_ITEM'
-export const addListItem = (text, listIndex) => ({
-  type: ADD_LIST,
-  text,
-  listIndex
-})
-
-export const DELETE_LIST_ITEM = 'DELETE_LIST_ITEM'
-export const deleteListItem = () => ({
-  type: DELETE_LIST
-})
-
-export const EDIT_LIST_ITEM = 'EDIT_LIST_ITEM'
-export const editListItem = (content, index) => ({
-  type: EDIT_LIST_ITEM,
-  content,
-  index
 })
 
 export const CLOSE_MODAL = 'CLOSE_MODAL'
