@@ -41,6 +41,12 @@ const user = (state = initialState, action) => {
         ...state
       }
 
+      case 'CLOSE_MODAL':
+      return {
+        ...state,
+        isOpen: false
+      }
+
     default:
       return state
   }

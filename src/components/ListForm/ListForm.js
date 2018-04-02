@@ -1,26 +1,34 @@
 import React from 'react'
+import { Field, reduxForm } from 'redux-form'
 import './ListForm.css'
 
-const ListForm = () => {
+let ListForm = (props) => {
+  const { handleSubmit, submitting, pristine, reset } = props
   return(
-    <form>
-      <label htmlFor="list-title">
-        <input type="text" name ="list-title" placeholder="Grocery List" />
-      </label>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="listTitle">Title</label>
+          <div>
+            <Field name="listTitle" component="input" type="text" id="listTitle" placeholder="Shopping List" />
+          </div>
+        </div>
 
-      <label htmlFor="list-content">
-        <input type="text" name ="" placeholder="apples" />
-      </label>
+        <div>
+          <label htmlFor="listContent">Content</label>
+          <div>
+            <Field name="listContent" component="textarea" type="text" id="listContent" placeholder="Shopping List" />
+          </div>
+        </div>
 
-      <button className="add-ingredient-button">Add Ingredient</button>
-
-      <ul className="ingredient-list">
-        <li className="ingredient"></li>
-      </ul>
-
-      <button type="submit" className="save-list-button">Save List</button>
-    </form>
+        <button type="submit">Save</button>
+      </form>
+    </div>
   )
 }
+
+ListForm = reduxForm({
+  form: 'list'
+})(ListForm)
 
 export default ListForm

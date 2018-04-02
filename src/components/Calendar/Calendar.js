@@ -8,8 +8,6 @@ require('react-big-calendar/lib/css/react-big-calendar.css')
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment))
 
-//click event, show modal to edit/delete
-
 const Calendar = props => {
   return (
     <div className="bigCalendar">

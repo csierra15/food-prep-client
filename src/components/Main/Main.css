@@ -26,3 +26,7 @@ button:hover {
   background-color: #497513;
   color: #FFFF;
 }
+
+.delete-button:hover {
+  background-color: #932A2B;
+}

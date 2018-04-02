@@ -1,5 +1,6 @@
 import React from 'react'
 import './ListPage.css'
+import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { editListItem, deleteListItem, addItem } from '../../actions'
 
@@ -9,27 +10,10 @@ const ListPage = (props) => {
       <h4>LISTS  - IDEAS - RECIPES...</h4>
 
       <div className="container">
-        <ul>
-          <h5>{props.listTitle}</h5>
-          <ul>
-            {props.listItems.map(list => {
-              <li>
-                {list.item}
-                <span>
-                  <button className="edit" onClick={(index) => editListItem(index) }>Edit</button>
-                  <button className="delete" onClick={(index) => deleteListItem(index) }>Delete</button>
-                </span>
-              </li>
-            })}
-          </ul>
-
-          <form>
-            <input placeholder="new item" className="new-item" name="userInput"></input>
-          </form>
-        </ul>
+        <h5>{props.listTitle}</h5>
       </div>
 
-      <button>New List</button>
+      <Link to="/add-list"><button>New List</button></Link>
     </div>
   )
 }

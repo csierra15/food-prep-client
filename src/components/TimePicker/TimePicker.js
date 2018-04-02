@@ -11,7 +11,6 @@ const TimePickerComponent = (props) => {
     <TimePicker
         showSecond={false}
         format={format}
-        defaultValue={now}
         use12Hours
         minuteStep={15}
         inputReadOnly

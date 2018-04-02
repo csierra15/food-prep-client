@@ -59,10 +59,32 @@ export const getMealInfo = (content) => ({
 })
 
 export const UPDATE_MEAL = 'UPDATE_MEAL'
-export const updateMeal = (content, index) => ({
-  type: UPDATE_MEAL,
-  content,
-  index
+export const updateMeal = (values) => {
+  const mealId = values._id
+  const updatedMeal = {
+    title: values.mealDescription,
+    start: values.startTime,
+    end: moment(values.startTime).add(1, 'hours')
+  }
+  return (dispatch) => {
+    fetch(`${API_BASE_URL}/meals/${userId}/${mealId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+      },
+      body: JSON.stringify({values: updatedMeal})
+    })
+    .then(res => res.json())
+    .then(json => dispatch(updateMealSuccess(json)))
+    .catch(err => console.log(err))
+  }
+}
+
+export const UPDATE_MEAL_SUCCESS = 'UPDATE_MEAL_SUCCESS'
+export const updateMealSuccess = (events) => ({
+  type: UPDATE_MEAL_SUCCESS,
+  events
 })
 
 export const DELETE_MEAL = 'DELETE_MEAL'
@@ -111,4 +133,9 @@ export const editListItem = (content, index) => ({
   type: EDIT_LIST_ITEM,
   content,
   index
+})
+
+export const CLOSE_MODAL = 'CLOSE_MODAL'
+export const closeModal = () => ({
+  type: CLOSE_MODAL
 })

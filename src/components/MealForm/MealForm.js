@@ -31,12 +31,7 @@ let MealForm = (props) => {
             <Field name="mealDescription" component="input" type="text" id="mealDesc" placeholder="muffins" />
           </div>
         </div>
-        <button
-          type="submit"
-          disabled={
-            props.pristine ||
-            props.submitting
-          }>
+        <button type="submit" disabled={pristine || submitting}>
           Submit
         </button>
       </form>
