@@ -15,21 +15,18 @@ img {
   width: 100%;
 }
 
-.background-img {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
 .homepage-h1 {
   position: absolute;
   font-family: 'Raleway', sans-serif;
-  top: 10%;
+  top: 2em;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 8em;
+  font-size: 4em;
   margin: 0;
+  color: #6E685F;
 }
 
 section {
   float: left;
-  padding: 0.5em;
+  margin: 0 auto;
 }

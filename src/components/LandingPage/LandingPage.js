@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './LandingPage.css'
+import '../../stylesheets/float-grid.css'
 
 const LandingPage = () => {
   return (
@@ -15,17 +16,17 @@ const LandingPage = () => {
         </header>
         <section>
           <h3>Plan your meals</h3>
-          <i className="fas fa-calendar-alt fa-7x"></i>
+          <i className="fas fa-calendar-alt fa-7x col-4"></i>
           <p>Build meal plans.</p>
         </section>
         <section>
           <h3>Make notes.</h3>
-          <i className="fas fa-list-alt fa-7x"></i>
+          <i className="fas fa-list-alt fa-7x col-4"></i>
           <p>Keep track of your favorite recipes, todos, lists, and more!</p>
         </section>
         <section>
           <h3>Prep!</h3>
-          <i className="fas fa-lemon fa-7x"></i>
+          <i className="fas fa-lemon fa-7x col-4"></i>
           <p></p>
         </section>
         <Link to="/register">

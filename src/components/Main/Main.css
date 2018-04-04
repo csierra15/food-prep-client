@@ -21,13 +21,13 @@ button {
   border-radius: 5px;
   width: 8em;
   height: 2em;
-  background-color: #D6BFAB;
+  background-color: #CC9539;
+  color: #FFFF;
 }
 
 button:hover {
   cursor: pointer;
   background-color: #497513;
-  color: #FFFF;
 }
 
 .delete-button:hover {

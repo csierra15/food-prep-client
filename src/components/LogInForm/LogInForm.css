@@ -1,3 +1,32 @@
-form, .login-h1 {
+.login-div {
+  background-color: #D6BFAB;
+  min-height: 100vh;
+  margin-top: 0;
+}
+
+.login-h1 {
+  padding: 3em 0 1em 0;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login-form, .login-h1 {
   text-align: center;
 }
+
+.login-form {
+  border: 5px solid #497513;
+  width: 75%;
+  height: 15em;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding-top: 1em;
+  background-color: #FFFF;
+}
+
+input {
+  width: 75%;
+  margin: 1em auto;
+}
+
+/*green border around form, styles on h1?*/
