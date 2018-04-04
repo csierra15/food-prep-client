@@ -32,3 +32,24 @@ h4 {
 .list-card:hover {
   cursor: pointer;
 }
+
+#delete-list {
+  display: none;
+  /* top: 0;
+  right: 0;
+  width: 0.1em;
+  height: 0.1em;
+  border: none;
+  background-color: #FFFF; */
+}
+
+.container:hover button {
+  display: block;
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.1em;
+  height: 0.1em;
+  border: none;
+  background-color: #FFFF; */
+}

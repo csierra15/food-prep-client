@@ -16,7 +16,7 @@ export class Dashboard extends Component {
     return (
       <div className="dashboard">
         <header role="banner">
-          <h1>Hello!</h1>
+          <h1 className="dashboard-h1">Hello!</h1>
           <h2>Here's your plan</h2>
         </header>
         <Calendar />

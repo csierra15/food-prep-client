@@ -46,18 +46,6 @@ export const fetchMealData = () => {
   }
 }
 
-export const FETCH_MEAL_DATA_SUCCESS = 'FETCH_MEAL_DATA_SUCCESS'
-export const fetchMealDataSuccess = (events) => ({
-  type: FETCH_MEAL_DATA_SUCCESS,
-  events
-})
-
-export const GET_MEAL_INFO = 'GET_MEAL_INFO'
-export const getMealInfo = (content) => ({
-  type: GET_MEAL_INFO,
-  content
-})
-
 export const UPDATE_MEAL = 'UPDATE_MEAL'
 export const updateMeal = (values) => {
   const mealId = values._id
@@ -102,6 +90,18 @@ export const deleteMeal = (mealId) => {
   }
 }
 
+export const FETCH_MEAL_DATA_SUCCESS = 'FETCH_MEAL_DATA_SUCCESS'
+export const fetchMealDataSuccess = (events) => ({
+  type: FETCH_MEAL_DATA_SUCCESS,
+  events
+})
+
+export const GET_MEAL_INFO = 'GET_MEAL_INFO'
+export const getMealInfo = (info) => ({
+  type: GET_MEAL_INFO,
+  info
+})
+
 export const ADD_LIST = 'ADD_LIST'
 export const addList = (values) => {
   const list = {
@@ -145,11 +145,25 @@ export const deleteList = (listId) => {
 }
 
 export const UPDATE_LIST = 'UPDATE_LIST'
-export const updateList = (content, index) => ({
-  type: UPDATE_LIST,
-  content,
-  index
-})
+export const updateList = (values) => {
+  let listId = values._id
+  return (dispatch) => {
+    fetch(`${API_BASE_URL}/lists/${userId}/${listId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+      },
+      body: JSON.stringify({values})
+    })
+    .then(res => res.json())
+    .then(json => {
+      console.log(json)
+      dispatch(fetchListDataSuccess(json))
+    })
+    .catch(err => console.log(err))
+  }
+}
 
 export const FETCH_LIST_DATA = 'FETCH_LIST_DATA'
 export const fetchListData = () => {
@@ -174,6 +188,12 @@ export const FETCH_LIST_DATA_SUCCESS = 'FETCH_LIST_DATA_SUCCESS'
 export const fetchListDataSuccess = (lists) => ({
   type: FETCH_LIST_DATA_SUCCESS,
   lists
+})
+
+export const GET_LIST_INFO = 'GET_LIST_INFO'
+export const getListInfo = (info) => ({
+  type: GET_LIST_INFO,
+  info
 })
 
 export const CLOSE_MODAL = 'CLOSE_MODAL'

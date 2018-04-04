@@ -7,8 +7,7 @@ import { registerUser } from '../../actions/authActions'
 const RegisterForm = (props) => {
   return (
     <section>
-        <h2>Ready to make a plan?</h2>
-        <h3>sign up for an account</h3>
+        <h2>Register for a Food Prep account.</h2>
         <form onSubmit={ (e) => {
           e.preventDefault();
           const username = e.target.username.value
@@ -32,7 +31,7 @@ const RegisterForm = (props) => {
           <input type="password" name="confirmPassword" />
 
           <button type="submit">Sign Up</button>
-          <span>Already have an account? <Link to="/login">Log in</Link></span>
+          <span>or <Link to="/login"><button type="submit">Log In</button></Link></span>
         </form>
     </section>
   )

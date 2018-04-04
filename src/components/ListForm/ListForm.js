@@ -13,11 +13,10 @@ let ListForm = (props) => {
             <Field name="title" component="input" type="text" id="listTitle" placeholder="Shopping List" />
           </div>
         </div>
-
         <div>
           <label htmlFor="content">Content</label>
           <div>
-            <Field name="content" component="textarea" type="text" id="listContent" placeholder="Shopping List" />
+            <Field name="content" component="textarea" rows="4" cols="50" type="text" id="listContent" placeholder="Shopping List" />
           </div>
         </div>
 

@@ -5,6 +5,7 @@ const initialState = {
   events: [],
   lists: [],
   currentSelectedEvent: {},
+  currentSelectedList: {},
   isOpen: false
 }
 
@@ -30,17 +31,23 @@ const user = (state = initialState, action) => {
         isOpen: false
       }
 
-      case 'GET_MEAL_INFO':
-      return {
-        ...state,
-        currentSelectedEvent: action.content,
-        isOpen: true
-      }
-
       case 'FETCH_LIST_DATA_SUCCESS':
       return {
         ...state,
         lists: action.lists
+      }
+
+      case 'GET_MEAL_INFO':
+      return {
+        ...state,
+        currentSelectedEvent: action.info,
+        isOpen: true
+      }
+
+      case 'GET_LIST_INFO':
+      return {
+        ...state,
+        currentSelectedList: action.info
       }
 
       case 'CLOSE_MODAL':

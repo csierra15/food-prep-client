@@ -18,8 +18,8 @@ const Calendar = props => {
         events={props.events}
         views={['month', 'day', 'week', 'agenda']}
         step={60}
-        onSelectEvent={(content) => {
-          props.dispatch(getMealInfo(content))
+        onSelectEvent={(info) => {
+          props.dispatch(getMealInfo(info))
           props.triggerModal
         }}
       />
