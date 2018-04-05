@@ -41,7 +41,19 @@ export const fetchMealData = () => {
       }
     })
     .then(res => res.json())
-    .then(json => dispatch(fetchMealDataSuccess(json)))
+    .then(json => {
+      const events = json.map(item => {
+        return {
+          start: moment(item.start).toDate(),
+          end: moment(item.end).toDate(),
+          startTime: item.startTime,
+          title: item.title,
+          _id: item._id
+        }
+      })
+
+      dispatch(fetchMealDataSuccess(events))
+    })
     .catch(err => console.log(err))
   }
 }

@@ -30,7 +30,7 @@ export class EditMealForm extends Component {
             <label htmlFor="timeInput">Select Time</label>
             <div>
               <Field name="timeInput" component={props =>
-                <TimePickerComponent {...props} />
+                <TimePickerComponent {...props} time={this.props.time} />
               } type="time" />
             </div>
           </div>

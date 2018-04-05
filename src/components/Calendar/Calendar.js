@@ -16,6 +16,7 @@ const Calendar = props => {
         selectable={true}
         drilldownView='agenda'
         events={props.events}
+        defaultDate={new Date()}
         views={['month', 'day', 'week', 'agenda']}
         step={60}
         onSelectEvent={(info) => {

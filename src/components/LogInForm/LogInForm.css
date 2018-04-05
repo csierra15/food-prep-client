@@ -1,5 +1,5 @@
 .login-div {
-  background-color: #D6BFAB;
+  background-color: #B5FFE3;
   min-height: 100vh;
   margin-top: 0;
 }
@@ -15,7 +15,7 @@
 }
 
 .login-form {
-  border: 5px solid #497513;
+  border: 5px solid #6E685F;
   width: 75%;
   height: 15em;
   margin: 0 auto;
@@ -28,5 +28,3 @@ input {
   width: 75%;
   margin: 1em auto;
 }
-
-/*green border around form, styles on h1?*/

@@ -13,6 +13,7 @@ const TimePickerComponent = (props) => {
         use12Hours
         minuteStep={15}
         inputReadOnly
+        placeholder={props.time}
         onChange={param => props.input.onChange(moment(param).format("hh:mm"))}
     />
   )

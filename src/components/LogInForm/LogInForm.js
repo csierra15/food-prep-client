@@ -6,7 +6,7 @@ import { logInUser } from '../../actions/authActions'
 const LogInForm = (props) => {
   return (
     <div className="login-div">
-      <h1 className="login-h1">Log in to your Food Prep account</h1>
+      <h1 className="login-h1">Log in to your Food Prep account.</h1>
       <form className="login-form" onSubmit={(e) => {
         e.preventDefault();
         const username = e.target.username.value

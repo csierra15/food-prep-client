@@ -18,7 +18,7 @@ img {
 .homepage-h1 {
   position: absolute;
   font-family: 'Raleway', sans-serif;
-  top: 2em;
+  top: 1.5em;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4em;
@@ -26,7 +26,36 @@ img {
   color: #6E685F;
 }
 
-section {
-  float: left;
+#login-btn, #register-btn {
+  position: absolute;
+  top: 75%;
+}
+
+#login-btn {
+  left: 10%;
+}
+
+#register-btn {
+  left: 50%;
+}
+
+#icons-section {
   margin: 0 auto;
+}
+
+.icon-info {
+  float: left;
+}
+
+@media only screen and (min-width: 640px) {
+  .homepage-h1 {
+    font-size: 5em;
+  }
+
+  #login-btn {
+    left: 25%;
+  }
+  #register-btn {
+    left: 55%;
+  }
 }
