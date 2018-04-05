@@ -1,0 +1,17 @@
+.big-list-div {
+  text-align: center;
+}
+
+#big-list-h1 {
+  text-decoration: underline;
+}
+
+#big-list-span {
+  display: none;
+}
+
+.big-list-li:hover span {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 0 0 0.5em;
+}

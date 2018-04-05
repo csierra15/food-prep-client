@@ -21,8 +21,12 @@ button {
   border-radius: 5px;
   width: 8em;
   height: 3em;
-  background-color: #CC9539;
+  background-color: #869F7F;
   color: #FFFF;
+}
+
+.delete-button {
+  background-color: #AE5442;
 }
 
 button:hover {
@@ -31,5 +35,5 @@ button:hover {
 }
 
 .delete-button:hover {
-  background-color: #932A2B;
+  background-color: #DA874B;
 }

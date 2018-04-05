@@ -16,23 +16,23 @@ class Lists extends Component {
         <h1>LISTS  - IDEAS - RECIPES...</h1>
         {this.props.lists.map((list) => {
           return (
-            <div className="list-card"
+            <div className="list-card col-2"
                key={list._id}
                onClick={() => {
                 this.props.dispatch(getListInfo(list))
                 window.location = '/view-list'
-              }}
-               >
+              }}>
               <div className="container">
-                <button id="delete-list">x</button>
                 <h4 className="listTitle">{list.title}</h4>
-                <ul>{list.content}</ul>
+                <ul>
+                  <li>{list.content}</li>
+                </ul>
               </div>
             </div>
           )
         })
       }
-        <Link to="/add-list"><button>New List</button></Link>
+        <Link to="/add-list"><button id="new-list-btn">New List</button></Link>
       </div>
     )
   }

@@ -151,6 +151,7 @@ export const deleteList = (listId) => {
     .then(res => res.json())
     .then(json => {
       dispatch(fetchListDataSuccess(json))
+      window.location = '/lists'
     })
     .catch(err => console.log(err))
   }
@@ -171,7 +172,7 @@ export const updateList = (values) => {
     .then(res => res.json())
     .then(json => {
       console.log(json)
-      dispatch(fetchListDataSuccess(json))
+      dispatch(fetchListData())
     })
     .catch(err => console.log(err))
   }
@@ -189,7 +190,6 @@ export const fetchListData = () => {
     })
     .then(res => res.json())
     .then((json) => {
-      console.log('hello hello hello', json)
       dispatch(fetchListDataSuccess(json))
     })
     .catch(err => console.log(err))
