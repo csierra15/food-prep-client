@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { fetchListData, getListInfo } from '../../actions'
+import { fetchListData, getListInfo, triggerListModal } from '../../actions'
 import './Lists.css'
+import NewListModal from '../NewListModal/NewListModal'
 
 class Lists extends Component {
 
@@ -13,7 +14,7 @@ class Lists extends Component {
   render() {
     return (
       <div>
-        <h1>LISTS  - IDEAS - RECIPES...</h1>
+        <h1 id="lists-h1">LISTS  - IDEAS - RECIPES...</h1>
         {this.props.lists.map((list) => {
           return (
             <div className="list-card col-2"
@@ -25,14 +26,22 @@ class Lists extends Component {
               <div className="container">
                 <h4 className="listTitle">{list.title}</h4>
                 <ul>
-                  <li>{list.content}</li>
+                  {list.content.map(content => (
+                    <li key={Math.random()}>{content}</li>
+                  ))}
                 </ul>
               </div>
             </div>
           )
         })
       }
-        <Link to="/add-list"><button id="new-list-btn">New List</button></Link>
+        <button id="new-list-btn"
+          onClick={(e) => {
+            e.preventDefault()
+            this.props.dispatch(triggerListModal())
+          }}
+          >New List</button>
+          <NewListModal />
       </div>
     )
   }

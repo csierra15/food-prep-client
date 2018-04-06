@@ -24,7 +24,7 @@ export const addMeal = (values) => {
     })
     .then(res => {
       res.json()
-      //window.location = '/dashboard'
+      window.location = '/dashboard'
     })
     .catch(err => console.log(err))
   }
@@ -51,7 +51,6 @@ export const fetchMealData = () => {
           _id: item._id
         }
       })
-
       dispatch(fetchMealDataSuccess(events))
     })
     .catch(err => console.log(err))
@@ -79,7 +78,6 @@ export const updateMeal = (values) => {
     })
     .then(res => res.json())
     .then(json => {
-      console.log(json)
       dispatch(fetchMealDataSuccess(json))
     })
     .catch(err => console.log(err))
@@ -112,6 +110,11 @@ export const GET_MEAL_INFO = 'GET_MEAL_INFO'
 export const getMealInfo = (info) => ({
   type: GET_MEAL_INFO,
   info
+})
+
+export const TRIGGER_LIST_MODAL = 'TRIGGER_LIST_MODAL'
+export const triggerListModal = () => ({
+  type: TRIGGER_LIST_MODAL
 })
 
 export const ADD_LIST = 'ADD_LIST'
@@ -160,6 +163,7 @@ export const deleteList = (listId) => {
 export const UPDATE_LIST = 'UPDATE_LIST'
 export const updateList = (values) => {
   let listId = values._id
+  console.log(values);
   return (dispatch) => {
     fetch(`${API_BASE_URL}/lists/${userId}/${listId}`, {
       method: 'PUT',
@@ -170,9 +174,8 @@ export const updateList = (values) => {
       body: JSON.stringify({values})
     })
     .then(res => res.json())
-    .then(json => {
-      console.log(json)
-      dispatch(fetchListData())
+    .then(lists => {
+      dispatch(fetchListDataSuccess(lists))
     })
     .catch(err => console.log(err))
   }
@@ -212,3 +215,22 @@ export const CLOSE_MODAL = 'CLOSE_MODAL'
 export const closeModal = () => ({
   type: CLOSE_MODAL
 })
+
+export const DELETE_CONTENT_ITEM = 'DELETE_CONTENT_ITEM'
+export const deleteContentItem = (index) => ({
+  type: DELETE_CONTENT_ITEM,
+  index
+})
+
+export const ADD_CONTENT_ITEM = 'ADD_CONTENT_ITEM'
+export const addContentItem = (item) => ({
+  type: ADD_CONTENT_ITEM,
+  item
+})
+
+export const addContent = (content, dispatch) => {
+  dispatch(addContentItem(content))
+}
+
+//add content item, dispatch an action, update database, send back
+//data, dispatch action

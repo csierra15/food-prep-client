@@ -2,8 +2,8 @@ ul {
   padding: 0;
 }
 
-h1 {
-  padding-top: 5em;
+#lists-h1 {
+  color: #D0D3D4;
 }
 
 .listTitle {

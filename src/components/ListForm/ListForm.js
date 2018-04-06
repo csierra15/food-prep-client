@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Field, reduxForm } from 'redux-form'
 import './ListForm.css'
 
@@ -13,12 +14,6 @@ let ListForm = (props) => {
             <Field name="title" component="input" type="text" id="listTitle" placeholder="Shopping List" />
           </div>
         </div>
-        <div>
-          <label htmlFor="content">Content</label>
-          <div>
-            <Field name="content" component="textarea" rows="4" cols="50" type="text" id="listContent" placeholder="Shopping List" />
-          </div>
-        </div>
 
         <button type="submit" disabled={pristine || submitting}>Save</button>
       </form>
@@ -30,4 +25,4 @@ ListForm = reduxForm({
   form: 'list'
 })(ListForm)
 
-export default ListForm
+export default connect()(ListForm)

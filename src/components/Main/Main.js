@@ -7,12 +7,12 @@ import NavBar from '../NavBar/NavBar'
 import LandingPage from '../LandingPage/LandingPage'
 import RegisterForm from '../RegisterForm/RegisterForm'
 import Footer from '../Footer/Footer'
-import ListPage from '../ListPage/ListPage'
 import Lists from '../Lists/Lists'
 import BigList from '../BigList/BigList'
 import Dashboard from '../Dashboard/Dashboard'
 import MealPage from '../MealPage/MealPage'
 import LogInForm from '../LogInForm/LogInForm'
+import EditMealPage from '../EditMealPage/EditMealPage'
 
 class Main extends Component {
 
@@ -33,9 +33,9 @@ class Main extends Component {
           <Route exact path="/add-meal" component={MealPage} />
           <Route exact path="/register" component={RegisterForm} />
           <Route exact path="/lists" component={Lists} />
-          <Route exact path="/add-list" component={ListPage} />
           <Route exact path="/view-list" component={BigList} />
           <Route exact path="/login" component={LogInForm} />
+          <Route exact path="/view-meal" component={EditMealPage} />
           <Footer />
         </div>
       </Router>

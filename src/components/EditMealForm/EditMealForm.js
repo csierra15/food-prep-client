@@ -4,6 +4,7 @@ import { Field, reduxForm, change } from 'redux-form'
 import TimePickerComponent from '../TimePicker/TimePicker'
 import moment from 'moment'
 import { deleteMeal } from '../../actions'
+import './EditMealForm.css'
 
 export class EditMealForm extends Component {
 
@@ -15,7 +16,7 @@ export class EditMealForm extends Component {
   render() {
     const { handleSubmit, pristine, submitting } = this.props
     return (
-      <div>
+      <div id="new-plan-form-container">
         <form id="new-plan-form" onSubmit={handleSubmit}>
           <h3>Edit Meal</h3>
           <div>
@@ -45,11 +46,12 @@ export class EditMealForm extends Component {
           </button>
         </form>
         <button
+          id="edit-meal-delete-btn"
           className="delete-button"
           disabled={pristine || submitting}
           onClick={() => this.props.dispatch(deleteMeal(this.props.id))}
           >
-          Delete
+          Delete Meal
         </button>
       </div>
     )

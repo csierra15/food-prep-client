@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 footer {
+  display: block;
   width: 100%;
   font-family: 'Roboto', sans-serif;
   text-align: center;

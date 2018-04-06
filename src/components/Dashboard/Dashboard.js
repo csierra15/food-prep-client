@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Calendar from '../Calendar/Calendar'
 import { connect } from 'react-redux'
 import { fetchMealData } from '../../actions'
-import MealModal from '../MealModal/MealModal'
 
 export class Dashboard extends Component {
 
@@ -20,7 +19,6 @@ export class Dashboard extends Component {
           <h2>Here's your plan</h2>
         </header>
         <Calendar />
-        <MealModal />
         <Link to="/add-meal" className="new-meal-link"><button className="new-meal-btn">Add Meal</button></Link>
       </div>
     )

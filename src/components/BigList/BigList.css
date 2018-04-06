@@ -6,12 +6,17 @@
   text-decoration: underline;
 }
 
-#big-list-span {
-  display: none;
+#list-item-delete {
+  cursor: pointer;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0.5em;
 }
 
-.big-list-li:hover span {
-  display: inline-block;
-  cursor: pointer;
-  padding: 0 0 0 0.5em;
+#add-item-btn {
+  margin-bottom: 3em;
+}
+
+#new-list-item-input {
+  width: 33.3%;
 }

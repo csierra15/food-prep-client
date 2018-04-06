@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {Link} from 'react-router-dom'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment'
 import './Calendar.css'
@@ -21,7 +22,7 @@ const Calendar = props => {
         step={60}
         onSelectEvent={(info) => {
           props.dispatch(getMealInfo(info))
-          props.triggerModal
+          window.location = '/view-meal'
         }}
       />
     </div>
@@ -29,8 +30,7 @@ const Calendar = props => {
 }
 
 const mapStateToProps = (state, props) => ({
-  events: state.user.events,
-  triggerModal: state.user.isOpen
+  events: state.user.events
 })
 
 export default connect(mapStateToProps)(Calendar)

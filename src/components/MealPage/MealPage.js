@@ -6,7 +6,6 @@ import { addMeal } from '../../actions'
 class MealPage extends Component {
 
   submit = values => {
-    console.log('dispatching add meal!', values)
     this.props.dispatch(addMeal(values))
   }
   render() {

@@ -50,10 +50,35 @@ const user = (state = initialState, action) => {
         currentSelectedList: action.info
       }
 
+      case 'TRIGGER_LIST_MODAL':
+      return {
+        ...state,
+        isOpen: true
+      }
+
       case 'CLOSE_MODAL':
       return {
         ...state,
         isOpen: false
+      }
+
+      case 'DELETE_CONTENT_ITEM':
+      const content = state.currentSelectedList.content.filter((item, index) => index !== action.index)
+      return {
+        ...state,
+        currentSelectedList: {
+          ...state.currentSelectedList,
+          content
+        }
+      }
+
+      case 'ADD_CONTENT_ITEM':
+      return {
+        ...state,
+        currentSelectedList: {
+          ...state.currentSelectedList,
+          content: [...state.currentSelectedList.content, action.item]
+        }
       }
 
     default:

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './BigList.css'
 import '../../stylesheets/float-grid.css'
-import { deleteList, updateList } from '../../actions'
+import { deleteList, updateList, deleteContentItem, addContentItem } from '../../actions'
 
 let BigList = (props) => {
   return(
@@ -13,19 +13,18 @@ let BigList = (props) => {
           return (
             <li className="big-list-li" key={index}>
               {content}
-              <span
-                id="big-list-span"
+              <button className="delete-button" id="list-item-delete"
                 onClick={(e) => {
                   e.preventDefault()
-                  console.log('clicked the x', index)
-                  // for (let i=0; i<=props.list.content.length; i++) {
-                  //   if (i === listContent) {
-                  //   props.list.content.splice(0, 1, i)
-                  //   props.dispatch(updateList(props.list))
-                  //   }
-                  // }
+                  for (let i=0; i<=props.list.content.length; i++) {
+                    if (i === index) {
+                      props.dispatch(deleteContentItem(index))
+                      props.dispatch(updateList(props.list))
+                    }
+                  }
+                  console.log('clicked the x', props.list.content)
                 }}
-                >x</span>
+                >x</button>
             </li>
           )
         })}
@@ -33,14 +32,19 @@ let BigList = (props) => {
       <form onSubmit={(e) => {
         e.preventDefault()
         let newItem = e.target.newItem.value
-        props.list.content.push(newItem)
-        props.dispatch(updateList(props.list))
-        newItem = ''
+        //instead of putting into state,
+        const newContent = [...props.list.content, newItem]
+        console.log(props.list);
+        props.dispatch(addContentItem(newItem))
+        props.dispatch(updateList(newContent))
+        e.target.newItem.value = ''
       }}>
         <input type="text"
            placeholder="add new item"
            name="newItem"
-           id="new-list-item-input"></input>
+           id="new-list-item-input">
+        </input>
+        <button type="submit" id="add-item-btn">Add Item</button>
       </form>
       <button
         className="delete-button"
