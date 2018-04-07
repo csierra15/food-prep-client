@@ -1,33 +1,46 @@
+'use strict'
+
 import React from 'react'
+import {Link} from 'react-router-dom'
 import './LandingPage.css'
+import '../../stylesheets/float-grid.css'
 
 const LandingPage = () => {
   return (
     <main role="main">
-      <header role="banner">
-        <h1>Food Prep</h1>
-        <h2>Take Control</h2>
-      </header>
-
-      <section>
-        <h3>Plan your meals for the week</h3>
-        <p>[placeholder for icons]</p>
-        <p>Food Prep helps you gain consistency and certainty in what you will have to eat by giving you a solid platform to build weekly meal plans.</p>
-      </section>
-
-      <section>
-        <h3>Collect recipes you'd like to try</h3>
-        <p>[placeholder for icons]</p>
-        <p>Save your favorite recipes in one place.</p>
-      </section>
-
-      <section>
-        <h3>Itemize your pantry</h3>
-        <p>[placeholder for icons]</p>
-        <p>Write down the ingredients you already have to make shopping list and meal plan building easier.</p>
-      </section>
+      <div className="home-containter">
+        <div className="background-img">
+          <img src="https://i.imgur.com/o6qVmRb.jpg" title="source: imgur.com" alt="cutting board with herbs and knife"/>
+        </div>
+        <header role="banner">
+          <h1 className="homepage-h1">Food Prep</h1>
+        </header>
+        <Link id="login-btn" to="/login">
+          <button>
+            Log In
+          </button>
+        </Link>
+        <Link id="register-btn" to="/register">
+          <button>
+            Register
+          </button>
+        </Link>
+        <div id="icons-section">
+          <div className="icon-info col-4">
+            <h3>Plan your meals</h3>
+            <i className="fas fa-calendar-alt fa-7x"></i>
+          </div>
+          <div className="icon-info col-4">
+            <h3>Make notes.</h3>
+            <i className="fas fa-list-alt fa-7x"></i>
+          </div>
+          <div className="icon-info col-4">
+            <h3>Prep!</h3>
+            <i className="fas fa-lemon fa-7x"></i>
+          </div>
+        </div>
+      </div>
     </main>
-
   )
 }
 

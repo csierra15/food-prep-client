@@ -1,28 +1,39 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.app {
+  font-family: 'Roboto', sans-serif;
+  margin: none;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+li {
+  style: none;
 }
 
-.App-title {
-  font-size: 1.5em;
+button {
+  margin-bottom: 2em;
+  font-size: 1em;
+  border-radius: 5px;
+  width: 8em;
+  height: 3em;
+  background-color: #869F7F;
+  color: #FFFF;
 }
 
-.App-intro {
-  font-size: large;
+.delete-button {
+  background-color: #AE5442;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button:hover {
+  cursor: pointer;
+  background-color: #497513;
+}
+
+.delete-button:hover {
+  background-color: #DA874B;
 }

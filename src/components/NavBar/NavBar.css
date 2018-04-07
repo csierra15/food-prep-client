@@ -1,1 +1,60 @@
+.nav-bar {
+  overflow: hidden;
+  background-color: #7D555D;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
+ul {
+  margin: 0;
+}
+
+li {
+ list-style: none;
+}
+
+.nav-list-item, .log-out {
+  display: block;
+  color: #f2f2f2;
+  background-color: #7D555D;
+  text-align: center;
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 0;
+}
+
+.nav-list-item {
+  float: left;
+}
+
+.log-out {
+  float: right;
+}
+
+.nav-list-item:hover {
+  background-color: #7A6A5F;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-list-item:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-bar.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav-bar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

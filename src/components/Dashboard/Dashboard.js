@@ -1,38 +1,30 @@
-import React from 'react'
+'use strict'
+
+import React, {Component} from 'react'
 import './Dashboard.css'
+import { Link } from 'react-router-dom'
+import Calendar from '../Calendar/Calendar'
+import { connect } from 'react-redux'
+import { fetchMealData } from '../../actions'
 
-const Dashboard = () => {
-  return (
-    <div>
-      <header role="banner">
-        <h1>Hello User!</h1>
-        <h2>Here's what you're eating today</h2>
-      </header>
+export class Dashboard extends Component {
 
-      <section>
-        <h3>Wednesday 2/21/18</h3>
-          <table>
-            <tr>
-              <th>Breakfast</th>
-              <th>Snack</th>
-              <th>Lunch</th>
-              <th>Snack</th>
-              <th>Dinner</th>
-            </tr>
-            <tr>
-              <td>Green smoothie and coffee</td>
-              <td>Trail Mix</td>
-              <td>Chicken Salad</td>
-              <td>Veggie Sticks</td>
-              <td>Steak and sweet potatoes</td>
-            </tr>
-          </table>
-          <button>edit</button>
-          <button>delete</button>
-          <button>new meal</button>
-      </section>
-    </div>
-  )
+  componentDidMount(props) {
+    this.props.dispatch(fetchMealData())
+  }
+
+  render() {
+    return (
+      <div className="dashboard">
+        <header role="banner">
+          <h1 className="dashboard-h1">Hello!</h1>
+          <h2>Here's your plan</h2>
+        </header>
+        <Calendar />
+        <Link to="/add-meal" className="new-meal-link"><button className="new-meal-btn">Add Meal</button></Link>
+      </div>
+    )
+  }
 }
 
-export default Dashboard
+export default connect()(Dashboard)

@@ -1,3 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
 main {
+  font-family: 'Roboto', sans-serif;
+}
+
+.home-containter {
+  position: relative;
   text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.homepage-h1 {
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  top: 1.5em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  margin: 0;
+  color: #6E685F;
+}
+
+#login-btn, #register-btn {
+  position: absolute;
+  top: 75%;
+}
+
+#login-btn {
+  left: 10%;
+}
+
+#register-btn {
+  left: 50%;
+}
+
+#icons-section {
+  margin: 0 auto;
+}
+
+.icon-info {
+  float: left;
+}
+
+@media only screen and (min-width: 640px) {
+  .homepage-h1 {
+    font-size: 5em;
+  }
+
+  #login-btn {
+    left: 25%;
+  }
+  #register-btn {
+    left: 55%;
+  }
 }

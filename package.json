@@ -5,14 +5,22 @@
   "dependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "install": "^0.10.4",
+    "moment": "^2.21.0",
+    "npm": "^5.7.1",
+    "rc-time-picker": "^3.3.1",
     "react": "^16.2.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-big-calendar": "^0.19.0",
     "react-dom": "^16.2.0",
+    "react-modal": "^3.3.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
     "redux": "^3.7.2",
-    "redux-form": "^7.2.3",
+    "redux-form": "^7.3.0",
+    "redux-persist": "^5.9.1",
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
