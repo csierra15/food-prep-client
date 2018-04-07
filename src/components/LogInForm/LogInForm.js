@@ -1,3 +1,5 @@
+'use strict'
+
 import React from 'react'
 import './LogInForm.css'
 import { connect } from 'react-redux'

@@ -1,8 +1,10 @@
+'use strict'
+
 import React from 'react'
 import { connect } from 'react-redux'
 import './BigList.css'
 import '../../stylesheets/float-grid.css'
-import { deleteList, updateList, deleteContentItem, addContentItem } from '../../actions'
+import { deleteList, updateListContent, updateList, deleteContentItem } from '../../actions'
 
 let BigList = (props) => {
   return(
@@ -32,11 +34,8 @@ let BigList = (props) => {
       <form onSubmit={(e) => {
         e.preventDefault()
         let newItem = e.target.newItem.value
-        //instead of putting into state,
         const newContent = [...props.list.content, newItem]
-        console.log(props.list);
-        props.dispatch(addContentItem(newItem))
-        props.dispatch(updateList(newContent))
+        props.dispatch(updateListContent(newContent, props.list._id))
         e.target.newItem.value = ''
       }}>
         <input type="text"

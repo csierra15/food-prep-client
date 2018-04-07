@@ -222,15 +222,23 @@ export const deleteContentItem = (index) => ({
   index
 })
 
-export const ADD_CONTENT_ITEM = 'ADD_CONTENT_ITEM'
-export const addContentItem = (item) => ({
-  type: ADD_CONTENT_ITEM,
-  item
-})
-
-export const addContent = (content, dispatch) => {
-  dispatch(addContentItem(content))
+export const UPDATE_LIST_CONTENT = 'UPDATE_LIST_CONTENT'
+export const updateListContent = (listContent, id) => {
+  let listId = id
+  return (dispatch) => {
+    fetch(`${API_BASE_URL}/lists/${userId}/${listId}/content`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
+      },
+      body: JSON.stringify({listContent})
+    })
+    .then(res => res.json())
+    .then(list => {
+      dispatch(fetchListDataSuccess(list))
+      dispatch(getListInfo(list))
+    })
+    .catch(err => console.log(err))
+  }
 }
-
-//add content item, dispatch an action, update database, send back
-//data, dispatch action

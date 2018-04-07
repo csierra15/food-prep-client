@@ -40,8 +40,7 @@ const user = (state = initialState, action) => {
       case 'GET_MEAL_INFO':
       return {
         ...state,
-        currentSelectedEvent: action.info,
-        isOpen: true
+        currentSelectedEvent: action.info
       }
 
       case 'GET_LIST_INFO':

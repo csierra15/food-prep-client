@@ -1,6 +1,7 @@
+'use strict'
+
 import React from 'react'
 import { connect } from 'react-redux'
-import {Link} from 'react-router-dom'
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment'
 import './Calendar.css'
@@ -13,12 +14,11 @@ const Calendar = props => {
   return (
     <div className="bigCalendar">
       <BigCalendar
-        popup={true}
+        popup
         selectable={true}
-        drilldownView='agenda'
         events={props.events}
         defaultDate={new Date()}
-        views={['month', 'day', 'week', 'agenda']}
+        views={['month', 'week', 'agenda']}
         step={60}
         onSelectEvent={(info) => {
           props.dispatch(getMealInfo(info))

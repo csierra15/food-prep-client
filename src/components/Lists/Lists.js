@@ -1,6 +1,7 @@
+'use strict'
+
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { fetchListData, getListInfo, triggerListModal } from '../../actions'
 import './Lists.css'
 import NewListModal from '../NewListModal/NewListModal'
