@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { fetchListData, getListInfo, triggerListModal } from '../../actions'
 import './Lists.css'
+import '../../stylesheets/float-grid.css'
 import NewListModal from '../NewListModal/NewListModal'
 
 class Lists extends Component {
@@ -33,7 +34,7 @@ class Lists extends Component {
             </div>
           )
         })
-      }
+        }
         <button id="new-list-btn"
           onClick={(e) => {
             e.preventDefault()

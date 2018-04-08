@@ -24,21 +24,21 @@ export class EditMealForm extends Component {
               Date
             </label>
             <div>
-              <Field name="dateInput" component="input" type="date" />
+              <Field name="dateInput" component="input" type="date" id="date-input" />
             </div>
           </div>
           <div>
-            <label htmlFor="timeInput">Select Time</label>
-            <div>
-              <Field name="timeInput" component={props =>
-                <TimePickerComponent {...props} time={this.props.time} />
-              } type="time" />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="mealDescription">Meal</label>
+            <label htmlFor="mealDescription">Meal Description</label>
             <div>
               <Field name="mealDescription" component="input" type="text" id="mealDesc" />
+            </div>
+          </div>
+          <div>
+            <label htmlFor="timeInput">Update Time</label>
+            <div>
+              <Field id="time-picker" name="timeInput" component={props =>
+                <TimePickerComponent {...props} time={this.props.time} />
+              } type="time" />
             </div>
           </div>
           <button type="submit" disabled={pristine || submitting}>
