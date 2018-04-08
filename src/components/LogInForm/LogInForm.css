@@ -28,3 +28,28 @@ input {
   width: 75%;
   margin: 1em auto;
 }
+
+#login-page-btn {
+  background-color: #7D555D;
+}
+
+#login-page-btn:hover {
+  background-color: #DA874B;
+}
+
+#register-link {
+  color: #7D555D;
+  display: block;
+  padding-bottom: 1em;
+}
+
+#register-link:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .login-form {
+    width: 50%;
+    height: 85%;
+  }
+}

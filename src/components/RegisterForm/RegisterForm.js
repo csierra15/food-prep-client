@@ -23,13 +23,8 @@ const RegisterForm = (props) => {
           Password
         </label>
         <input type="password" name="password" />
-        <label htmlFor="confirmPassword">
-          Confirm Password
-        </label>
-        <input type="password" name="confirmPassword" />
-        <button type="submit">Sign Up</button>
-        <p id="register-or">or</p>
-        <Link to="/login"><button type="submit">Log In</button></Link>
+        <button id="register-page-btn" type="submit">Sign Up</button>
+        <Link id="login-link" to="/login">Log In</Link>
       </form>
     </div>
   )

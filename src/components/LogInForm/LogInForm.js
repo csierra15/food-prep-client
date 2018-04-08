@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './LogInForm.css'
 import { connect } from 'react-redux'
 import { logInUser } from '../../actions/authActions'
@@ -22,7 +23,8 @@ const LogInForm = (props) => {
           Password
         </label>
         <input type="password" name="password" />
-        <button type="submit">Sign In</button>
+        <button id="login-page-btn" type="submit">Sign In</button>
+        <Link id="register-link" to="/register">Register</Link>
       </form>
     </div>
   )

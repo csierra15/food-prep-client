@@ -31,6 +31,27 @@ input {
   background-color: #FFFF;
 }
 
-#register-or {
-  margin: 0;
+#register-page-btn {
+  background-color: #7D555D;
+}
+
+#register-page-btn:hover {
+  background-color: #DA874B;
+}
+
+#login-link {
+  color: #7D555D;
+  display: block;
+  padding-bottom: 1em;
+}
+
+#login-link:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 640px) {
+  .register-form {
+    width: 50%;
+    height: 85%;
+  }
 }
