@@ -31,6 +31,8 @@ export const registerUser = (username, password) => {
       window.location = '/login'
     })
     .catch(err => console.log(err))
+    alert('Oops! Couldn\'t register new user')
+    window.location = '/'
   }
 }
 
@@ -56,25 +58,7 @@ export const logInUser = (username, password) => {
       window.location = '/dashboard'
     })
     .catch(err => console.log(err))
+    alert('Oops! Couldn\'t log in')
+    window.location = '/'
   }
 }
-
-// export const getUserData = () => {
-//   return (dispatch) => {
-//     const authToken = localStorage.getItem('token')
-//     fetch(`${API_BASE_URL}/protected`, {
-//       method: 'GET',
-//       headers: {
-//         'Content-Type': 'applicaton/json'
-//         Authorization: `Bearer ${authToken}`
-//       },
-//       body: JSON.stringify({
-//         username,
-//         password
-//       })
-//     })
-//     .then(res => res.json())
-//     .then(json => console.log(json))
-//     .catch(err => console.log(err))
-//   }
-// }
