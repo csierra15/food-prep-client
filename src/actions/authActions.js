@@ -28,11 +28,13 @@ export const registerUser = (username, password) => {
     .then(res => res.json())
     .then(json => {
       dispatch(registerUserSuccess(json))
+      alert('User registered! Log in to continue.')
       window.location = '/login'
     })
-    .catch(err => console.log(err))
-    alert('Oops! Couldn\'t register new user')
-    window.location = '/'
+    .catch(err => {
+      console.log(err)
+      alert('Oops! Couldn\'t register new user')
+    })
   }
 }
 
@@ -57,8 +59,10 @@ export const logInUser = (username, password) => {
       dispatch(fetchMealData(authToken))
       window.location = '/dashboard'
     })
-    .catch(err => console.log(err))
-    alert('Oops! Couldn\'t log in')
-    window.location = '/'
+    .catch(err => {
+      console.log(err)
+      alert('Oops! Couldn\'t log in')
+      window.location = '/'
+    })
   }
 }

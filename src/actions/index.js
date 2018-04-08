@@ -95,7 +95,10 @@ export const deleteMeal = (mealId) => {
       }
     })
     .then(res => res.json())
-    .then(json => dispatch(fetchMealDataSuccess(json)))
+    .then(json => {
+      dispatch(fetchMealDataSuccess(json))
+      window.location = '/dashboard'
+    })
     .catch(err => console.log(err))
   }
 }

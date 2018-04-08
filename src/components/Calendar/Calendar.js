@@ -16,7 +16,7 @@ const Calendar = props => {
         selectable={true}
         events={props.events}
         defaultDate={new Date()}
-        views={['month', 'week', 'agenda']}
+        views={['month', 'week']}
         step={60}
         onSelectEvent={(info) => {
           props.dispatch(getMealInfo(info))
