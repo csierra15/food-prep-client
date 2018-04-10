@@ -14,8 +14,7 @@ let ListForm = (props) => {
             <Field name="title" component="input" type="text" id="listTitle" placeholder="Shopping List" />
           </div>
         </div>
-
-        <button type="submit" disabled={pristine || submitting}>Save</button>
+        <button id="submit-list-form-btn" type="submit" disabled={pristine || submitting}>Save</button>
       </form>
     </div>
   )

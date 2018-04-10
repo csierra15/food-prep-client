@@ -12,6 +12,7 @@ class Lists extends Component {
   }
 
   render() {
+    console.log(this.props.lists);
     return (
       <div>
         <h1 id="lists-h1">LISTS  - IDEAS - RECIPES...</h1>

@@ -61,6 +61,12 @@ const user = (state = initialState, action) => {
         isOpen: false
       }
 
+      case 'UPDATE_LIST_DATA_SUCCESS':
+      return {
+        ...state,
+        currentSelectedList: action.list
+      }
+
       case 'DELETE_CONTENT_ITEM':
       const content = state.currentSelectedList.content.filter((item, index) => index !== action.index)
       return {

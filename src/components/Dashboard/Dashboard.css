@@ -1,5 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
-/* font-family: 'Raleway', sans-serif;
-font-family: 'Roboto', sans-serif; */
+.new-meal-btn, .new-meal-link {
+  margin: 0.5em auto;
+}
 
-/* MOBILE FIRST */
+@media only screen and (min-width: 800px) {
+  .new-meal-btn {
+    margin-left: 0.5em;
+  }
+}

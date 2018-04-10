@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import ReactModal from 'react-modal'
 import { closeModal, addList } from '../../actions'
 import ListForm from '../ListForm/ListForm'
+import './NewListModal.css'
 
 class NewListModal extends Component {
 
@@ -14,7 +15,7 @@ class NewListModal extends Component {
   render() {
     return (
       <ReactModal isOpen={this.props.isOpen} contentLabel="Edit Meal" ariaHideApp={false}>
-        <button onClick={() => this.props.dispatch(closeModal())}>x</button>
+        <button id="close-modal-btn" onClick={() => this.props.dispatch(closeModal())}>x</button>
         <ListForm onSubmit={this.submit} />
       </ReactModal>
     )

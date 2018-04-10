@@ -16,13 +16,8 @@ let BigList = (props) => {
               <button className="delete-button" id="list-item-delete"
                 onClick={(e) => {
                   e.preventDefault()
-                  for (let i=0; i<=props.list.content.length; i++) {
-                    if (i === index) {
-                      props.dispatch(deleteContentItem(index))
-                      props.dispatch(updateList(props.list))
-                    }
-                  }
-                  console.log('clicked the x', props.list.content)
+                  const listContent = props.list.content.filter((item, i) => i !== index)
+                  props.dispatch(updateListContent(listContent, props.list._id))
                 }}
                 >x</button>
             </li>

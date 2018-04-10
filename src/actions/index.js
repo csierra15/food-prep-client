@@ -225,6 +225,12 @@ export const deleteContentItem = (index) => ({
   index
 })
 
+export const UPDATE_LIST_DATA_SUCCESS = 'UPDATE_LIST_DATA_SUCCESS'
+export const updateListDataSuccess = (list) => ({
+  type: UPDATE_LIST_DATA_SUCCESS,
+  list
+})
+
 export const UPDATE_LIST_CONTENT = 'UPDATE_LIST_CONTENT'
 export const updateListContent = (listContent, id) => {
   let listId = id
@@ -239,8 +245,9 @@ export const updateListContent = (listContent, id) => {
     })
     .then(res => res.json())
     .then(list => {
-      dispatch(fetchListDataSuccess(list))
+      console.log(list);
       dispatch(getListInfo(list))
+      dispatch(updateListDataSuccess(list))
     })
     .catch(err => console.log(err))
   }

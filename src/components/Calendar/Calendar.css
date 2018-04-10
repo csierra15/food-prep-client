@@ -1,4 +1,9 @@
 .bigCalendar {
-  margin: 2em;
   height: 30em;
+}
+
+@media only screen and (min-width: 800px) {
+  .bigCalendar {
+    margin: 2em;
+  }
 }

@@ -44,6 +44,12 @@ export class EditMealForm extends Component {
           <button type="submit" disabled={pristine || submitting}>
             Submit
           </button>
+          <button id="cancel-btn" onClick={(e) => {
+            e.preventDefault
+            window.location="/dashboard"
+          }}>
+            Cancel
+          </button>
         </form>
         <button
           id="edit-meal-delete-btn"
