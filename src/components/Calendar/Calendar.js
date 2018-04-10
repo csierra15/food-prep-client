@@ -4,6 +4,7 @@ import BigCalendar from 'react-big-calendar'
 import moment from 'moment'
 import './Calendar.css'
 import { getMealInfo } from '../../actions'
+import '../../stylesheets/float-grid.css'
 require('react-big-calendar/lib/css/react-big-calendar.css')
 
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment))
@@ -24,7 +25,7 @@ function CustomToolbar(toolbar) {
 
   return (
     <div className="toolbar-container">
-      <div className="back-next-buttons">
+      <div className="back-next-buttons col-4">
         <button className="toolbar-btn" onClick={goToBack}>
           <i className="fas fa-angle-left"></i>
         </button>
@@ -33,8 +34,8 @@ function CustomToolbar(toolbar) {
           <i className="fas fa-angle-right"></i>
         </button>
       </div>
-      <label className='label-date'>{label()}</label>
-      <div className="view-buttons">
+      <label className='label-date col-4'>{label()}</label>
+      <div className="view-buttons col-4">
         <button className="toolbar-btn" onClick={goToDayView}><span className="label-filter-off">Day</span></button>
         <button className="toolbar-btn" onClick={goToWeekView}><span className="label-filter-off">Week</span></button>
         <button className="toolbar-btn" onClick={goToMonthView}><span className="label-filter-off">Month</span></button>
