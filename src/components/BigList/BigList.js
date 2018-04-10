@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import './BigList.css'
 import '../../stylesheets/float-grid.css'
-import { deleteList, updateListContent, updateList, deleteContentItem } from '../../actions'
+import { deleteList, updateListContent } from '../../actions'
 
 let BigList = (props) => {
   return(
