@@ -1,9 +1,27 @@
-.bigCalendar {
-  height: 30em;
+#bigCalendar {
+  height: 50em;
+}
+
+.toolbar-btn {
+  width: 6em;
 }
 
 @media only screen and (min-width: 800px) {
-  .bigCalendar {
+  #bigCalendar {
     margin: 2em;
+  }
+
+  .back-next-buttons, .label-date, .view-buttons {
+    float: left;
+    display: inline;
+  }
+
+  .toolbar-btn {
+    width: 8em;
+    margin-right: 0.2em;
+  }
+
+  .label-date {
+    margin: 0 auto;
   }
 }
