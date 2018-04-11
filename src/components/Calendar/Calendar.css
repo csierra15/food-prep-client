@@ -1,9 +1,47 @@
-.bigCalendar {
-  height: 30em;
+#bigCalendar {
+  height: 50em;
+}
+
+.toolbar-btn {
+  width: 5em;
+  margin-bottom: 0.5em;
 }
 
 @media only screen and (min-width: 800px) {
-  .bigCalendar {
+  #bigCalendar {
     margin: 2em;
+  }
+
+  .back-next-buttons, .label-date, .view-buttons {
+    float: left;
+    display: inline;
+  }
+
+  .label-date {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #bigCalendar {
+    margin: 2em;
+  }
+
+  .back-next-buttons, .label-date, .view-buttons {
+    float: left;
+    display: inline;
+  }
+
+ .back-next-buttons {
+    margin-left: 0.8em;
+  }
+
+  .toolbar-btn {
+    width: 8em;
+    margin-right: 0.2em;
+  }
+
+  .label-date {
+    margin: 0 auto;
   }
 }
