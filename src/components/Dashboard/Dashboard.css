@@ -1,9 +1,15 @@
-.new-meal-btn, .new-meal-link {
-  margin: 0.5em auto;
+header {
+  margin-left: 4em;
 }
 
-@media only screen and (min-width: 800px) {
-  .new-meal-btn {
-    margin-left: 0.5em;
-  }
+.dashboard-h1 {
+  font-size: 3em;
+}
+
+#add-meal-btn {
+  background-color: #7D555D;
+}
+
+#add-meal-btn:hover {
+  background-color: #7F6F63;
 }

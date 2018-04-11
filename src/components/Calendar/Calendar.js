@@ -44,6 +44,20 @@ function CustomToolbar(toolbar) {
   )
 }
 
+function eventStyleGetter(event, start, end, isSelected) {
+    var style = {
+        backgroundColor: '#AE5442',
+        borderRadius: '0px',
+        opacity: 0.8,
+        color: '#FFFF',
+        border: '0px',
+        display: 'block'
+    }
+    return {
+        style: style
+    }
+}
+
 const Calendar = props => {
   return (
     <div id="bigCalendar">
@@ -62,6 +76,7 @@ const Calendar = props => {
         components={{
           toolbar: CustomToolbar
         }}
+        eventPropGetter={(eventStyleGetter)}
       />
     </div>
   )

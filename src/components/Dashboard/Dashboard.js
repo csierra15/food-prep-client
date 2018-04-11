@@ -16,10 +16,10 @@ export class Dashboard extends Component {
       <div className="dashboard">
         <header role="banner">
           <h1 className="dashboard-h1">Hello!</h1>
-          <h2>Here's your plan</h2>
+          <h3>Plan your meals here</h3>
+          <Link to="/add-meal"><button id="add-meal-btn">Add Item</button></Link>
         </header>
         <Calendar />
-        <Link to="/add-meal" className="new-meal-link"><button className="new-meal-btn">Add Meal</button></Link>
       </div>
     )
   }
