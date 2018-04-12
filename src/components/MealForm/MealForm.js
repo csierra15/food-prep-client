@@ -8,10 +8,7 @@ let MealForm = (props) => {
   const { handleSubmit, submitting, pristine, reset } = props
   return (
     <div className="meal-plan">
-      <form id="new-plan-form" onSubmit={() => {
-        handleSubmit()
-        reset()
-      }}>
+      <form id="new-plan-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="dateInput">
             Date
