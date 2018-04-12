@@ -5,7 +5,7 @@ import './MealForm.css'
 import  TimePickerComponent from '../TimePicker/TimePicker'
 
 let MealForm = (props) => {
-  const { handleSubmit, submitting, pristine } = props
+  const { handleSubmit, submitting, pristine, reset } = props
   return (
     <div className="meal-plan">
       <form id="new-plan-form" onSubmit={handleSubmit}>
@@ -18,6 +18,12 @@ let MealForm = (props) => {
           </div>
         </div>
         <div>
+          <label htmlFor="mealDescription">What are you eating?</label>
+          <div>
+            <Field name="mealDescription" component="input" type="text" id="mealDesc" placeholder="muffins" className="meal-form-input" />
+          </div>
+        </div>
+        <div>
           <label htmlFor="timeInput">Select Time</label>
           <div>
             <Field name="timeInput" component={props =>
@@ -25,13 +31,9 @@ let MealForm = (props) => {
             } type="time" id="timeInput" placeholder="12:00 PM" className="meal-form-input" />
           </div>
         </div>
-        <div>
-          <label htmlFor="mealDescription">What are you eating?</label>
-          <div>
-            <Field name="mealDescription" component="input" type="text" id="mealDesc" placeholder="muffins" className="meal-form-input" />
-          </div>
-        </div>
-        <button type="submit" disabled={pristine || submitting}>
+        <button type="submit"
+          onClick={() => dispatch(reset('meal'))}
+          disabled={pristine || submitting}>
           Submit
         </button>
       </form>
