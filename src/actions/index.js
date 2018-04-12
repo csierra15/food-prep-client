@@ -245,7 +245,6 @@ export const updateListContent = (listContent, id) => {
     })
     .then(res => res.json())
     .then(list => {
-      console.log(list);
       dispatch(getListInfo(list))
       dispatch(updateListDataSuccess(list))
     })

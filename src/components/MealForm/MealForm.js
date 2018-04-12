@@ -14,7 +14,7 @@ let MealForm = (props) => {
             Date
           </label>
           <div>
-            <Field name="dateInput" component="input" type="date" placeholder="MM/DD/YYYY" />
+            <Field name="dateInput" component="input" type="date" placeholder="MM/DD/YYYY" className="meal-form-input" />
           </div>
         </div>
         <div>
@@ -22,13 +22,13 @@ let MealForm = (props) => {
           <div>
             <Field name="timeInput" component={props =>
               <TimePickerComponent {...props} />
-            } type="time" />
+            } type="time" id="timeInput" placeholder="12:00 PM" className="meal-form-input" />
           </div>
         </div>
         <div>
           <label htmlFor="mealDescription">What are you eating?</label>
           <div>
-            <Field name="mealDescription" component="input" type="text" id="mealDesc" placeholder="muffins" />
+            <Field name="mealDescription" component="input" type="text" id="mealDesc" placeholder="muffins" className="meal-form-input" />
           </div>
         </div>
         <button type="submit" disabled={pristine || submitting}>

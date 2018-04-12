@@ -13,7 +13,6 @@ class Lists extends Component {
   }
 
   render() {
-    console.log(this.props.lists);
     return (
       <Linkify>
         <div>
