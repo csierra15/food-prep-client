@@ -31,9 +31,7 @@ let MealForm = (props) => {
             } type="time" id="timeInput" placeholder="12:00 PM" className="meal-form-input" />
           </div>
         </div>
-        <button type="submit"
-          onClick={(dispatch) => dispatch(reset('meal'))}
-          disabled={pristine || submitting}>
+        <button type="submit" disabled={pristine || submitting}>
           Submit
         </button>
       </form>
