@@ -9,8 +9,8 @@ let MealForm = (props) => {
   return (
     <div className="meal-plan">
       <form id="new-plan-form" onSubmit={() => {
-        handleSubmit
-        reset
+        handleSubmit()
+        reset()
       }}>
         <div>
           <label htmlFor="dateInput">
