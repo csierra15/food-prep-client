@@ -32,7 +32,7 @@ let MealForm = (props) => {
           </div>
         </div>
         <button type="submit"
-          onClick={() => dispatch(reset('meal'))}
+          onClick={(dispatch) => dispatch(reset('meal'))}
           disabled={pristine || submitting}>
           Submit
         </button>
