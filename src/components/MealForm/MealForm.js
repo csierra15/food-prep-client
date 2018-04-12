@@ -5,7 +5,7 @@ import './MealForm.css'
 import  TimePickerComponent from '../TimePicker/TimePicker'
 
 let MealForm = (props) => {
-  const { handleSubmit, submitting, pristine, reset } = props
+  const { handleSubmit, submitting, pristine } = props
   return (
     <div className="meal-plan">
       <form id="new-plan-form" onSubmit={handleSubmit}>
