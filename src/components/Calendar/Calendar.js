@@ -26,8 +26,8 @@ function CustomToolbar(toolbar) {
   return (
 
     <div className="toolbar-container">
-      <label className='label-date col-4'>{label()}</label>
-      <div className="back-next-buttons col-1">
+      <label className='label-date'>{label()}</label>
+      <div className="back-next-buttons col-12">
         <button className="toolbar-btn" onClick={goToBack}>
           <i className="fas fa-angle-left"></i>
         </button>
@@ -37,7 +37,7 @@ function CustomToolbar(toolbar) {
         </button>
         <button className="toolbar-btn" onClick={goToDayView}><span className="label-filter-off">Day</span></button>
         <button className="toolbar-btn" onClick={goToWeekView}><span className="label-filter-off">Week</span></button>
-        <button className="toolbar-btn" onClick={goToMonthView}><span className="label-filter-off">Month</span></button>      
+        <button className="toolbar-btn" onClick={goToMonthView}><span className="label-filter-off">Month</span></button>
       </div>
     </div>
   )

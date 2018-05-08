@@ -7,14 +7,17 @@
   margin-bottom: 0.5em;
 }
 
+.label-date {
+  text-align: center;
+}
+
 @media only screen and (min-width: 800px) {
   #bigCalendar {
     margin: 2em;
   }
 
-  .back-next-buttons, .label-date, .view-buttons {
-    float: left;
-    display: inline;
+  .toolbar-container {
+    text-align: center;
   }
 
   .label-date {
@@ -27,21 +30,7 @@
     margin: 2em;
   }
 
-  .back-next-buttons, .label-date, .view-buttons {
-    float: left;
-    display: inline;
-  }
-
- .back-next-buttons {
-    margin-left: 0.8em;
-  }
-
   .toolbar-btn {
     width: 8em;
-    margin-right: 0.2em;
-  }
-
-  .label-date {
-    margin: 0 auto;
   }
 }

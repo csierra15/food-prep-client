@@ -1,13 +1,14 @@
-header {
-  text-align: center;
-}
-
 .dashboard-h1 {
   font-size: 3em;
 }
 
+.add-meal-btn {
+  text-align: center
+}
+
 #add-meal-btn {
   background-color: #7D555D;
+  margin-top: 2rem;
 }
 
 #add-meal-btn:hover {
