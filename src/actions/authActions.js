@@ -28,8 +28,7 @@ export const registerUser = (username, password) => {
     .then(res => res.json())
     .then(json => {
       dispatch(registerUserSuccess(json))
-      alert('User registered! Log in to continue.')
-      window.location = '/login'
+      window.location = '/dashboard'
     })
     .catch(err => {
       console.log(err)
@@ -62,7 +61,6 @@ export const logInUser = (username, password) => {
     .catch(err => {
       console.log(err)
       alert('Oops! Couldn\'t log in')
-      window.location = '/'
     })
   }
 }
