@@ -28,7 +28,8 @@ export const registerUser = (username, password) => {
     .then(res => res.json())
     .then(json => {
       dispatch(registerUserSuccess(json))
-      window.location = '/dashboard'
+      dispatch(logInUserSuccess(json))
+      window.location = "/dashboard"
     })
     .catch(err => {
       console.log(err)
