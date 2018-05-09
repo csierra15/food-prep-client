@@ -26,11 +26,10 @@ export const registerUser = (username, password) => {
       })
     })
     .then(res => res.json())
-    .then(json => {
-      dispatch(registerUserSuccess(json))
-      dispatch(logInUserSuccess(json))
+    .then(json => dispatch(registerUserSuccess(json)).then(user => {
+      dispatch(logInUser(user))
       window.location = "/dashboard"
-    })
+    }))
     .catch(err => {
       console.log(err)
       alert('Oops! Couldn\'t register new user')

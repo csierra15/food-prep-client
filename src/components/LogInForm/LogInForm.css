@@ -17,8 +17,8 @@
 .login-form {
   border: 5px solid #6E685F;
   width: 75%;
-  height: 15em;
-  margin: 0 auto;
+  height: 16em;
+  margin: 0 auto 1em auto;
   border-radius: 5px;
   padding-top: 1em;
   background-color: #FFFF;
@@ -35,6 +35,10 @@ input {
 
 #login-page-btn:hover {
   background-color: #DA874B;
+}
+
+.demo {
+  padding-top: 1em;
 }
 
 #register-link {

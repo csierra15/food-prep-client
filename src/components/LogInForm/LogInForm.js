@@ -23,9 +23,11 @@ const LogInForm = (props) => {
           Password
         </label>
         <input type="password" name="password" />
-        <p>Demo Account</p>
-        <p>Username: demo</p>
-        <p>Password: demo1234</p>
+        <div className="demo">
+          <p>Demo Account</p>
+          <p>Username: demo</p>
+          <p>Password: demo1234</p>
+        </div>
         <button id="login-page-btn" type="submit">Sign In</button>
         <Link id="register-link" to="/register">Register</Link>
       </form>

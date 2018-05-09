@@ -15,7 +15,7 @@ const LandingPage = () => {
         </header>
         <Link id="login-btn" to="/login">
           <button>
-            Log In
+            Log In / Demo
           </button>
         </Link>
         <Link id="register-btn" to="/register">
