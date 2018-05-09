@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import NavBar from '../NavBar/NavBar'
 import LandingPage from '../LandingPage/LandingPage'
 import RegisterForm from '../RegisterForm/RegisterForm'
-import Footer from '../Footer/Footer'
 import Lists from '../Lists/Lists'
 import BigList from '../BigList/BigList'
 import Dashboard from '../Dashboard/Dashboard'
@@ -36,7 +35,6 @@ class Main extends Component {
           <Route exact path="/view-list" component={BigList} />
           <Route exact path="/login" component={LogInForm} />
           <Route exact path="/view-meal" component={EditMealPage} />
-          <Footer />
         </div>
       </Router>
     );

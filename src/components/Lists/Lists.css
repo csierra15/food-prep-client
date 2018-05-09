@@ -1,9 +1,19 @@
-ul {
-  padding: 0;
+.list-container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 #lists-h1 {
+  font-size: 3rem;
+  padding-left: 10px;
   color: #D0D3D4;
+}
+
+ul {
+  padding: 0;
 }
 
 .listTitle {
@@ -25,7 +35,7 @@ ul {
 }
 
 .list-card {
-  display: inline-block;
+  display: flex;
   text-align: center;
 }
 
@@ -45,7 +55,9 @@ ul {
 }
 
 #new-list-btn {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
   margin: 2em auto;
 }
 

@@ -15,11 +15,11 @@ class Lists extends Component {
   render() {
     return (
       <Linkify>
-        <div>
+        <div className="list-container">
           <h1 id="lists-h1">LISTS  - IDEAS - RECIPES...</h1>
           {this.props.lists.map((list) => {
             return (
-              <div className="list-card col-2"
+              <div className="list-card"
                  key={list._id}
                  onClick={() => {
                   this.props.dispatch(getListInfo(list))

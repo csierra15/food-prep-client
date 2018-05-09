@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Footer from '../Footer/Footer'
 import './LandingPage.css'
 import '../../stylesheets/float-grid.css'
 
@@ -38,6 +39,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   )
 }
