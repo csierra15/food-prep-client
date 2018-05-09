@@ -7,7 +7,7 @@ let ListForm = (props) => {
   const { handleSubmit, submitting, pristine } = props
   return(
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="list-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="title">Title</label>
           <div>
