@@ -25,17 +25,15 @@ const LandingPage = () => {
           </button>
         </Link>
         <div id="icons-section">
-          <div className="icon-info col-4">
-            <h3>Plan your meals</h3>
+          <div className="icon-info col-6">
+            <h3>Plan Your Meals</h3>
             <i className="fas fa-calendar-alt fa-7x"></i>
+            <p>Gain certainty by planning your meals for the day, week, or month.</p>
           </div>
-          <div className="icon-info col-4">
-            <h3>Make notes.</h3>
-            <i className="fas fa-list-alt fa-7x"></i>
-          </div>
-          <div className="icon-info col-4">
-            <h3>Prep!</h3>
+          <div className="icon-info col-6">
+            <h3>Prep</h3>
             <i className="fas fa-lemon fa-7x"></i>
+            <p>Spend time prepping your weekly meals!</p>
           </div>
         </div>
       </div>
