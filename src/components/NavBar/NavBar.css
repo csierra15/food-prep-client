@@ -16,23 +16,28 @@ li {
 
 .nav-list-item, .log-out {
   display: block;
-  color: #FFFF;
   background-color: #7A6A5F;
   text-align: center;
   padding: 1em;
   text-decoration: none;
-  font-size: 1em;
   margin: 0;
 }
 
-.nav-list-item {
+.logo {
+  font-family: 'Gothic A1', sans-serif;
+  font-weight: lighter;
+  font-size: 2em;
   float: left;
+  padding: 0;
+  color: #c0d8ba;
 }
 
 .log-out {
+  font-size: 1em;
   float: right;
+  color: #FFFF;
 }
 
-.nav-list-item:hover {
+.log-out:hover {
   background-color: #7D555D;
 }

@@ -8,8 +8,7 @@ const NavBar = (props) => {
 		<div className="nav-bar">
         {props.isLoggedIn ?
           <ul className="nav-list">
-            <li><Link to="/dashboard" className="nav-list-item">Home</Link></li>
-            <li><Link to="/lists" className="nav-list-item">Lists</Link></li>
+            <li><Link to="/dashboard" className="nav-list-item logo">Food Prep</Link></li>
             <li><Link to="/" className="nav-list-item log-out"
               onClick={() => {
                 localStorage.clear()
